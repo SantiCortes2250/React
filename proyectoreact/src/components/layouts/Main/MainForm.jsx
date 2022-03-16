@@ -32,7 +32,7 @@ export const MainForm = () => {
     /*Espera la promesa*/
     await setState({
       /*A la variable form del estado, vamos a agendarle el valor*/
-      /*form es un arreglo*/
+      /*form es un objeto*/
       form:{
         /*Spread Operator*/
         /*Esta funciona como un forEach, el ...state.form trae uno por uno vacio y el e.target.name lo llena*/
