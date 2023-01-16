@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    display: flex;
+    background-color: #323232;
+    flex-direction: column;
+}
+
+
+.img-main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+}
+img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50px;
+
+}
+
+.BtnHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    
+    
+
+}
+
+.BtnHeader button{
+    background-color: #DFDBE5;
+    color: black;
+    width: 90px;
+    height: 30px;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.BtnHeader button:hover{
+    color: white;
+    background-color: black;
+}
+
+
+.BtnFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}
+
+.BtnFooter button{
+    background-color: #DFDBE5;
+    color: black;
+    width: 90px;
+    height: 30px;
+    margin-left: 20px;
+    border-radius: 10px;
+
+}
+
+#imgLogin img{
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+}
+
+/*FORMULARIO*/
+
+
+.container-form{
+    margin-left: 20%;
+}
+
+#botones-form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+#botones-form button{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(28, 153, 111);
+    color: white;
+    margin-left: 3px;
+    border: ridge 2px ;
+    
+}
+
+#botones-form button:hover{
+    background-color: rgb(139, 219, 178);
+}
+
+
+.form{
+    font-size: 20px;
+    font-family: fantasy;
+    width: 400px;
+    height: 530px;
+    background-color:rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    align-items: center;
+}
+
+.form-2{
+    font-size: 20px;
+    font-family: fantasy;
+    width: 400px;
+    height: 530px;
+    background-color:rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    align-items: center;
+}
+
+.form-3{
+    font-size: 20px;
+    font-family: fantasy;
+    width: 400px;
+    height: 380px;
+    background-color:rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.formulario{
+    margin-top: 50px;
+}
+
+h3{
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#password{
+    margin-top: 7px;
+    width: 90%;
+    height: 30px;
+    border-radius: 7px;
+    margin-bottom: 7px;
+    margin-left: 20px;
+    border: solid 1px rgb(28, 153, 111);
+}
+
+#textarea{
+    border: solid 1px rgb(28, 153, 111);
+    border-radius: 7px;
+    margin-left: 20px;
+    width: 90%;
+}
+
+#email{
+    margin-left: 20px;
+    margin-top: 7px;
+    width: 90%;
+    height: 30px;
+    border-radius: 7px;
+    margin-bottom: 7px;
+    border: solid 1px rgb(28, 153, 111);
+}
+
+#password::placeholder{
+    padding-left: 10px;
+}
+
+#email::placeholder{
+    padding-left: 10px;
+}
+
+#nombres{
+    margin-left: 10px;
+    margin-bottom: 7px;
+
+}
+
+#nombres input{
+    margin-left: 10px;
+    width: 41.5%;
+    height: 30px;
+    border-radius: 7px;
+    padding-left: 10px;
+    border: solid 1px rgb(28, 153, 111);
+
+}
+
+
+
+
+
+#btnInput{
+    margin-top: 20px;
+    width: 40%;
+    height: 40px;
+    border-radius: 7px;
+    font-size: 15px;
+    background-color: #1e8f69;
+    color: white;
+    border: ridge 2px ;
+}
+
+#btnInput:hover{
+    background-color: rgb(139, 219, 178);
+    color: black;
+}
+/**/
+
+
+.h1-counter{
+    font-size: 40px;
+}
+
+.BtnCounter{
+    display: flex;
+    flex-direction: column;
+}
+
+.container1{
+    text-align: center;
+
+}
+
+.container2{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container2 button{
+    background-color: #3fb7cc;
+    color: black;
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+
+.container2 button:hover{
+    color: white;
+    background-color: #4d4646;
+
+}
+
+.h1-counter{
+    font-size: 50px;
+    font-family: fantasy;
+
+}
+
+
+
+
+
+
+#btnCard{
+    margin-top: 30px;
+    width: 100px;
+    height: 40px;
+    border-radius: 7px;
+    font-size: 15px;
+    background-color: #4d4646;
+    color: white;
+}
+
+
+#btnCard:hover{
+    background-color: white;
+    color: black;
+}
+
+
+p{
+    font-size: 40px;
+    color: white;
+}
+
+
+.off{
+    filter: grayscale(1)
+
+}
+
+.alerta p{
+    font-size: 15px;
+    color: black;
+}
+
+#nom{
+    margin-left: 20px;
+    margin-top: 7px;
+    width: 90%;
+    height: 30px;
+    border-radius: 7px;
+    margin-bottom: 7px;
+    border: solid 1px rgb(28, 153, 111);
+}
+
+#user_name{
+    margin-left: 20px;
+    margin-top: 7px;
+    width: 90%;
+    height: 30px;
+    border-radius: 7px;
+    margin-bottom: 7px;
+    border: solid 1px rgb(28, 153, 111);
+    
+}
+
+.password{
+    margin-left: 20px;
+    margin-top: 7px;
+    width: 90%;
+    height: 30px;
+    border-radius: 7px;
+    margin-bottom: 7px;
+    border: solid 1px rgb(28, 153, 111);
+
+}
+
+.p-footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+    bottom: 10;
+
+}
+
+.p-footer p{
+    font-size: 13px;
+    font-weight: bold;
+}
