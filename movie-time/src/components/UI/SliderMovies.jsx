@@ -1,26 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState} from 'react'
 import { getMovies } from '../../api'
-import { BannerSlider } from '../UI/BannerSlider'
+import { Imagenes } from './Imagenes'
 import Slider from "react-slick";
+import "../../stylesSlider/slick.css"; 
+
 import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import "../../stylesSlider/slick2.css"; 
-import { SliderMovies } from '../UI/SliderMovies';
-import { MdLocalMovies } from 'react-icons/md'
 
 
+export const SliderMovies = () => {
 
-
-export const MainHome = () => {
-
-    const settings = {
+    const settings2 = {
         dots: true,
         infinite: true,
-        slidesToShow:1,
+        slidesToShow:4,
         slidesToScroll: 1,
-        autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 8000,
+        speed: 700,
         cssEase: "linear",
         initialSlide: 0,
           responsive: [
@@ -58,8 +52,10 @@ export const MainHome = () => {
             }
           ]
       };
-
     
+    const IMAGE_PATH = 'https://image.tmdb.org/t/p/original';
+    const URL_IMAGE = 'https://image.tmdb.org/t/p/original';
+
     
     const [movies, setMovies] = useState([])
 
@@ -72,23 +68,28 @@ export const MainHome = () => {
         loadMovies()
         
     }, [])
+
     
+
+   
+
   return (
-    <div className='main_home_movies'>
-        <Slider {...settings}>
-            {movies.map((item) => (
-                <BannerSlider
-                key= {item.id}
-                item = {item}
-                />
-            ))}
-        </Slider>
-        <div className="container_title_movies">
-              <MdLocalMovies className='icon_container_movie_title'/>
-              <p className='p_container_movie_ti'>Latest</p>
-              <p className='p2_container_movie_title'>Movies</p>
-        </div>
-        <SliderMovies/>
+    <div className='main_slider_movies'>
+        <div className="cards_movies_list">
+            <Slider {...settings2}>
+                {movies.map((item) => (
+                <div className="cards_movies">
+                    <div className="container_img_movie">
+                        <Imagenes url={`${URL_IMAGE + item.poster_path}`} />
+                    </div>
+                    <div className="info_movie_card">
+                        <h4>{item.title}</h4>
+
+                    </div>
+                </div>
+                ))}
+            </Slider>
+        </div>  
     </div>
   )
 }
