@@ -7,9 +7,9 @@
 
 .slick-next
 {
-    z-index: 2;
+    z-index: 10;
     line-height: 0;
-    position: absolute;
+    position:absolute;
     left: 91.5%;
     top: 50%;
     display: block;
@@ -24,10 +24,10 @@
 }
 
 .slick-prev{
-    z-index: 2;
+    z-index: 10;
     line-height: 0;
     position: absolute;
-    top: 52%;
+    top: 50%;
     margin-left: 45px;
     display: block;
     width: 60px;

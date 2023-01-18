@@ -3,8 +3,8 @@ import { getMovies } from '../../api'
 import { Imagenes } from './Imagenes'
 import Slider from "react-slick";
 import "../../stylesSlider/slick.css"; 
-
 import "slick-carousel/slick/slick.css"; 
+import {AiFillPlayCircle} from 'react-icons/ai'
 
 
 export const SliderMovies = () => {
@@ -83,8 +83,17 @@ export const SliderMovies = () => {
                         <Imagenes url={`${URL_IMAGE + item.poster_path}`} />
                     </div>
                     <div className="info_movie_card">
-                        <h4>{item.title}</h4>
+                        <div className="btn_wacth">
+                          <AiFillPlayCircle className='icon_btn_watch'/>
+                        </div>
+                        <div className="info">
+                          <h4>{item.title}</h4>
+                          <div className="container_p">
+                            <p>{item.overview}</p>
 
+                          </div>
+                          
+                        </div>
                     </div>
                 </div>
                 ))}

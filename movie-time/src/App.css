@@ -108,9 +108,8 @@
   z-index: 2;
   position: absolute;
   top: 0%;
-  padding: 50px 100px 0px 170px;
-  color: white;
-  
+  padding: 140px 100px 0px 170px;
+  color: white; 
 }
 
 .container_info_movie h1{
@@ -189,6 +188,7 @@
 
 .main_slider_movies{
   width: 100%;
+  height: 500px;
   display: flex;
   justify-content: center;
   background-color: black;
@@ -196,21 +196,82 @@
 
 .cards_movies_list{
   width: 90%;
+  margin-bottom: 100px;
 }
 .cards_movies{
   width: 280px !important;
   height: 400px;
   background-color: rgb(25,26,29);
+  cursor: pointer;
+  
   
 }
 
 .container_img_movie{
   width: 100%;
-  height: 90%;
+  height: 100%;
 }
 
 .container_img_movie img{
   width: 100%;
   height: 100%;
+  
+}
+
+.container_movies_movie{
+  height: 400px;
+  width: 280px !important;
+  
+}
+
+.info_movie_card{
+  
+  padding: 30px 30px;
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: -500px;
+  color: transparent;
+}
+
+.cards_movies:hover .info_movie_card{
+  background-color: rgba(0, 0, 0, 0.637);
+  height: 500px;
+  position: relative;
+  color: white;
+  transition: all 2s;
+
+}
+
+.info{
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  margin-top: 50px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container_p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 130px;
+  font-size: 12px;
+  padding: 10px 0px;
+
+}
+
+.icon_btn_watch:hover{
+  cursor: pointer;
+  color: rgb(221, 13, 13);
+}
+
+.cards_movies:hover .btn_wacth{
+
+  color: rgb(191,27,44);
+  font-size: 70px;
+  transition: all 2s;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
 }
 
