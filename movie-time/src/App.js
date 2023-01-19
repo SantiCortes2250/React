@@ -8,6 +8,8 @@ import{
 
 
 import { Home } from './components/Pages/Home';
+import { Movies } from './components/Pages/Movies';
+
 
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Home/>}/>
+      <Route path='Movies/:nombre' element={<Movies/>}/>
     </Routes>
     </BrowserRouter>
   );

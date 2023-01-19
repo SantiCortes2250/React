@@ -9,7 +9,7 @@ export const BannerSlider = ({item}) => {
 
     
 
-    console.log(item.genres)
+    
    
 
     const IMAGE_PATH = 'https://image.tmdb.org/t/p/original';

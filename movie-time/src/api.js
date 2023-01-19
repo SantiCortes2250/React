@@ -17,3 +17,17 @@ export const getMovies = async () =>{
 
 
 }
+
+export const getMovie = async (nombre) =>{
+    const res = await axios.get(`${API}/search/movie`,{
+        params:{
+            api_key:API_KEY,
+            query: nombre
+
+        }
+    })
+
+    return res;
+    
+}
+
