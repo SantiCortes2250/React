@@ -78,7 +78,7 @@ export const SliderMovies = () => {
         <div className="cards_movies_list">
             <Slider {...settings2}>
                 {movies.map((item) => (
-                <div className="cards_movies">
+                <div key={item.id} className="cards_movies">
                     <div className="container_img_movie">
                         <Imagenes url={`${URL_IMAGE + item.poster_path}`} />
                     </div>

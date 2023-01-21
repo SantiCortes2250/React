@@ -18,11 +18,13 @@ export const getMovies = async () =>{
 
 }
 
-export const getMovie = async (nombre) =>{
+//get movies for the name
+
+export const getMovie = async (name) =>{
     const res = await axios.get(`${API}/search/movie`,{
         params:{
             api_key:API_KEY,
-            query: nombre
+            query: name
 
         }
     })
@@ -30,4 +32,23 @@ export const getMovie = async (nombre) =>{
     return res;
     
 }
+
+//get video movie
+
+export const getVideoMovie = async (id) =>{
+    const res = await axios.get(`${API}/movie/${id}`,{
+        params:{
+            api_key:API_KEY,
+            append_to_response: "videos"
+
+        }
+    })
+
+    return res;
+    
+}
+
+
+
+
 
