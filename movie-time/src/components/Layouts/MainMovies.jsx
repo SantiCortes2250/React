@@ -44,11 +44,10 @@ export const MainMovies = () => {
     }
 
     setPlaying(true)
+  }
 
-
-
-
-
+  const handlePlaying = () =>{
+    setPlaying(false)
   }
 
 
@@ -63,33 +62,15 @@ export const MainMovies = () => {
   return (
     <>
       {playing ? (
-        <div className='youtube-container' onClick={() => setPlaying(false)}>
-          <YouTube
-            videoId={trailer.key}
-            className="reproductor container"
-            opts={{
-              width: "100%",
-              height: "100%",
-              playerVars: {
-                autoplay: 1,
-                controls: 0,
-                cc_load_policy: 0,
-                fs: 0,
-                iv_load_policy: 0,
-                modestbranding: 0,
-                rel: 0,
-                showinfo: 0,
-              },
-            }}
-          />
-          <h1 onClick={() => setPlaying(false)} className="btn_trailer_movie">
-            x
-          </h1>
-        </div>
+        <VideoMovie
+        trailer={trailer}
+        onClick={handlePlaying}
+        />
+        
       ) :
-        (
-          ""
-        )
+      (
+        ""
+      )
       }
       <div className='main_movies_cards'>
         {movies.length === 0 ?
