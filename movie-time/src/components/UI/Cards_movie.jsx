@@ -5,21 +5,21 @@ import { getVideoMovie } from '../../api'
 
 
 
-export const Cards_movie = ({item}) => {
+export const Cards_movie = ({item, onSendData}) => {
+  
   
   
 
   const URL_IMAGE = 'https://image.tmdb.org/t/p/original';
-  const [trailer, setTrailer] = useState(null)
+
   
   
   
   
 
 
-  const selectMovie = (id) => {
-    console.log(id)
-   
+  function selectMovie (id) {
+    onSendData(id)
   };
 
 
