@@ -43,6 +43,8 @@ export const MainMovies = () => {
       setTrailer(trailer ? trailer : data.videos.results[0]);
     }
 
+   
+
     setPlaying(true)
   }
 

@@ -5,7 +5,7 @@ import { getVideoMovie } from '../../api';
 import { VideoMovie } from './VideoMovie';
 
 
-export const BannerSlider = ({item}) => {
+export const BannerSlider = ({item, onSendData}) => {
 
     const {id, title, backdrop_path, overview} = item
     
@@ -16,6 +16,9 @@ export const BannerSlider = ({item}) => {
     const IMAGE_PATH = 'https://image.tmdb.org/t/p/original';
     const URL_IMAGE = 'https://image.tmdb.org/t/p/original';
 
+    function selectMovie (id) {
+      onSendData(id)
+    };
     
 
   return (
@@ -41,7 +44,7 @@ export const BannerSlider = ({item}) => {
                 
                 <p></p>
             </div>
-            <button className='btn_watch_movie' >
+            <button className='btn_watch_movie' onClick={()=>{selectMovie(item.id)}}>
               <AiFillPlayCircle className='icon_watch'/>
               <span>Watch Trailer</span>
             </button>
