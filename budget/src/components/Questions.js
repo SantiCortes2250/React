@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import Error from './Error'
+import PropTypes from 'prop-types'
 
-const Questions = ({budget, remaining}) => {
+const Questions = ({budget, remaining, question}) => {
 
     const [amount, setAmount] = useState(0)
     const [error, setError] = useState(false)
@@ -17,11 +18,13 @@ const Questions = ({budget, remaining}) => {
         if(amount < 1 || isNaN( amount )){
             setError(true)
             return;
+
         }
 
         setError(false)
         budget(amount)
         remaining(amount)
+        question(false)
 
         
 
@@ -51,6 +54,12 @@ const Questions = ({budget, remaining}) => {
         </form>
     </>
   )
+}
+
+Questions.propTypes = {
+    budget: PropTypes.func.isRequired,
+    remaining: PropTypes.func.isRequired,
+    question: PropTypes.func.isRequired
 }
 
 export default Questions
