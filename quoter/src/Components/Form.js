@@ -1,5 +1,7 @@
 import React, {useState}from 'react'
 import styled from '@emotion/styled';
+import { getDiferenceYear, calcularMarca, obtenerPlan} from '../Helpers';
+import { isClickableInput } from '@testing-library/user-event/dist/utils';
 
 const Containers = styled.div`
     display: flex;
@@ -45,14 +47,111 @@ const Button = styled.button`
 
 `;
 
-const Form = () => {
+const Error = styled.div`
+    background-color: red;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    text-aling: center;
+    margin-bottom: 2rem;
+`
+
+const Form = ({setResumen, setloading}) => {
+
+  const [date, setdate] = useState({
+    marca: '',
+    year: '',
+    plan: ''
+
+  });
+
+
+  const [error, setError] = useState(false)
+
+  const {marca, year, plan} = date;
+
+
+  const getInfo = (e) =>{
+    setdate({
+      ...date,
+      [e.target.name] : e.target.value
+    })
+
+  }
+
+  const Handlesubmit = (e) =>{
+    e.preventDefault()
+
+
+    if(marca.trim() === '' || year.trim() === '' || plan.trim() === ''){
+      setError(true)
+      return;
+    }
+
+    setError(false)
+
+    //una base de 2000
+
+    let result = 2000;
+
+    //obtener diferencia de años
+
+    const diference = getDiferenceYear(year)
+     
+    //por cada año hay que restar el 3%
+    result -= (( diference * 3 ) * result ) / 100
+ 
+    //americano 15%
+    //asiatico 5%
+    //europeo 30%
+
+    result *= calcularMarca(marca)
+    
+
+
+    //Basico aumenta 20%
+    //Completo 50%
+
+    const incrementoPlan = obtenerPlan(plan)
+    
+    result = parseFloat(incrementoPlan * result).toFixed(2)
+
+    setloading(true)
+
+    setTimeout(() => {
+
+      //Elimina el spinner 
+      setloading(false)
+
+      //pasa la informacion al componente pricipal
+      setResumen({
+        cotizacion: result,
+        date
+  
+      });
+    }, 3000);
+
+   
+
+  }
+
+
+
+
 
     
   return (
-    <form>
+    <form
+      onSubmit={Handlesubmit} 
+    >
+      {error ? <Error>Todos los campos son obligatorios</Error>: null}
       <Containers>
         <Label>Brand</Label>
-        <Select>
+        <Select
+          name="marca"
+          value={marca}
+          onChange={getInfo}
+        >
           <option value="">-- Select --</option>
           <option value="americano">Americano</option>
           <option value="europeo">Europeo</option>
@@ -61,7 +160,11 @@ const Form = () => {
       </Containers>
       <Containers>
         <Label>Year</Label>
-        <Select>
+        <Select
+        name="year"
+        value={year}
+        onChange={getInfo}
+        >
           <option value="">-- Seleccione --</option>
           <option value="2021">2021</option>
           <option value="2020">2020</option>
@@ -81,15 +184,19 @@ const Form = () => {
          type='radio'
          name='plan'
          value='basic'
+         checked={plan === "basic"}
+         onChange={getInfo}
         />Basic
          <InputRadio
          type='radio'
          name='plan'
          value='complete'
+         checked={plan === "complete"}
+         onChange={getInfo}
         />Complete
       </Containers>
 
-      <Button type='button'>quoter</Button>
+      <Button type='submit'>quoter</Button>
     </form>
   );
 }

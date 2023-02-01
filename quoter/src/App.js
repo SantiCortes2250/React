@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "./Components/Header";
 import styled from '@emotion/styled';
 import Form from "./Components/Form";
+import Resumen from "./Components/Resumen";
+import Result from "./Components/Result";
+import Spinner from "./Components/Spinner/Spinner";
+
+
 
 
 
@@ -16,14 +21,35 @@ const ContainerForm = styled.div`
 `;
 
 function App() {
+
+  const [loading, setloading] = useState(false)
+
+  const [resumen, setResumen] = useState({
+    cotizacion: 0,
+    date:{
+      marca: '',
+      year: '',
+      plan: ''
+    }
+  })
+
+
+  const {date, cotizacion} = resumen;
   return (
     <Container>
       <Header 
        title='Insurance quoter'
       />
       <ContainerForm>
-        <Form/>
-
+        <Form
+        setResumen={setResumen}
+        setloading={setloading}
+        />
+        {loading ? <Spinner/> : null}
+        <Resumen
+        date={date}
+        />
+        {!loading ? <Result cotizacion={cotizacion}/> :null}
       </ContainerForm>
 
     </Container>
