@@ -18,7 +18,6 @@ const Questions = ({budget, remaining, question}) => {
         if(amount < 1 || isNaN( amount )){
             setError(true)
             return;
-
         }
 
         setError(false)
@@ -38,7 +37,7 @@ const Questions = ({budget, remaining, question}) => {
         onSubmit={handleSubmit}
         >
             <input 
-            type="text"
+            type="number"
             className='u-full-width'
             placeholder='Place your budget' 
             onChange={HandleChange}

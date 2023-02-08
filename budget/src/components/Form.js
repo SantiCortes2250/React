@@ -22,12 +22,11 @@ const Form = ({setCost, setCreateCost}) => {
 
     setError(false)
 
-    //build spending
+    //build cost
     const cost = {
       name,
       amount,
       id: shortid.generate()
-
     }
 
     //pass the costs to the app.js component
@@ -63,7 +62,7 @@ const Form = ({setCost, setCreateCost}) => {
              className='u-full-width'
              placeholder='Ex. 300'
              value={amount}
-             onChange={e=> setAmount((e.target.value))}
+             onChange={e=> setAmount(parseInt(e.target.value, 10))}
             />
         </div>
         <input

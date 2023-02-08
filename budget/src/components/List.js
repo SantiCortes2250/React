@@ -11,7 +11,6 @@ const List = ({costs}) => (
             key={cost.id}
             cost={cost}
             />
-
         ))}
     </div>
 );
