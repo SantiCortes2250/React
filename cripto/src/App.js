@@ -1,7 +1,11 @@
 import styled from "@emotion/styled";
-import React from "react";
+import axios from "axios";
+import React, {useState, useEffect} from "react";
 import Form from "./Components/Form";
+import Price from "./Components/Price";
+import Spinner from "./Components/Spinner.js/Spinner";
 import image from "./cryptomonedas.png";
+
 
 
 const Container = styled.div`
@@ -39,6 +43,36 @@ const Heading = styled.h1`
 `;
 
 function App() {
+
+  const [money, setMoney] = useState('')
+  const [cripto, setCripto] = useState('')
+  const [result, setResult] = useState({})
+  const [spinner, setSpinner] = useState(false)
+
+
+  useEffect(() => {
+    const getValues = async()=>{
+      const url  = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${cripto}&tsyms=${money}`
+      const {data} = await axios.get(url)
+      setResult(data.DISPLAY[cripto][money])
+      setSpinner(true)
+    }
+    getValues()
+
+    setTimeout(() => {
+      setSpinner(false)
+    }, 3000)
+
+    
+
+    
+  }, [money, cripto])
+
+
+  const component = spinner ? <Spinner/> : <Price result={result}/>
+  
+
+
   return (
     <Container>
       <div>
@@ -49,7 +83,11 @@ function App() {
       </div>
       <div>
         <Heading>Cryptos the instant</Heading>
-        <Form/>
+        <Form
+        setMoney={setMoney}
+        setCripto={setCripto}
+        />
+        {component}
       </div>
   </Container>
 
