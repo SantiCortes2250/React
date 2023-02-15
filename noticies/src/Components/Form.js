@@ -23,8 +23,6 @@ const Form = ({setCategory}) => {
 
     setCategory(state)
 
-
-
   }
 
   return (
