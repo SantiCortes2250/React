@@ -1,12 +1,39 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Error from './Error'
 
-const Form = () => {
+const Form = ({word}) => {
+
+  const [search, setsearch] = useState('')
+  const [error, seterror] = useState(false)
+
+  const HandleSubmit = (e) =>{
+    e.preventDefault()
+
+
+    if(search.trim() === ''){
+      seterror(true)
+      return
+
+    }
+
+    seterror(false)
+
+    word(search)
+
+
+
+
+
+  }
+
   return (
-    <form>
+    <form
+    onSubmit={HandleSubmit}>
         <div className="row">
         <div className="form-group col-md-6">
             <input 
             type="text"
+            onChange={e => setsearch(e.target.value)}
             className='form-control form-control-lg'
             placeholder='Search Images, Ex: Food'
              />
@@ -20,6 +47,8 @@ const Form = () => {
         </div>
 
         </div>
+
+        { error ? <Error message='Enter a value'/> : null}
         
     </form>
   )
