@@ -2,7 +2,7 @@ import React from 'react'
 
 const Error = () => {
   return (
-    <div>Error</div>
+    <p className='alert alert-danger text-center p-2'>All fields obligates</p>
   )
 }
 

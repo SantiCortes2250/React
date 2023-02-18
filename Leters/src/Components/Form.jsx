@@ -1,8 +1,9 @@
 import React, {useState} from "react";
+import Error from "./Error";
 
 
 
-const Form = () => {
+const Form = ({setsearchLeter}) => {
 
     const [search, setsearch] = useState({
         artist: '',
@@ -33,10 +34,13 @@ const Form = () => {
 
         seterror(false)
 
+        setsearchLeter(search)
+
 
     }
   return (
     <div className="bg-info">
+      {error ? <Error/>:null}
       <div className="container">
         <div className="row">
           <form 
