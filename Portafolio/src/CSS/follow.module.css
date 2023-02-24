@@ -1,0 +1,33 @@
+.container{
+    width: 300px;
+    top: 50%;
+    left: -120px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transform: rotate(90deg);
+    color: white;
+
+    
+}
+
+.container hr{
+    transform: rotate(90deg);
+    height: 60px;
+
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+}
+
+.icons a{
+    width: 20px;
+    height: 20px;
+    margin-right:10px ;
+}
+
+
