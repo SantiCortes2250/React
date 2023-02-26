@@ -1,0 +1,87 @@
+{
+    "name" : "Santiago Rincon Cortes",
+    "From" : "Colombia",
+    "Phone" : "+57 300-605-2291",
+    "Email" : "santicortesrincon15@gmail.com",
+    "Description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+    "image" : "",
+    "Experience" : [
+        {
+            "company": "DevoCamp",
+            "year": "2023",
+            "work" : "Frontend Developer"
+        },
+        {
+            "company": "Buses Armenia S.A",
+            "year": "2022 - 2022",
+            "work" : "Frontend Developer"
+        },
+        {
+            "company": "Booker",
+            "year": "2021 - 2022",
+            "work" : "Frontend Developer"
+        }
+    ],
+    "Education" : [
+        {
+            "certificate" : "Tecnologo en programación de Software",
+            "year" : "2020 - 2022",
+            "university" : "SENA"
+        },
+        {
+            "certificate" : "Tecnico en programación de Software",
+            "year" : "2019 - 2020",
+            "university" : "SENA"
+        },
+        {
+            "certificate" : "Bachillerato",
+            "year" : "2020",
+            "university" : "Institución educativa Marcelino Champagnat"
+        }
+    ],
+    "Skills" : [
+        {
+            "skill" : "HTML / CSS",
+            "icon" : ""
+        },
+        {
+            "skill" : "Javascript",
+            "icon" : ""
+        },
+        {
+            "skill" : "React JS",
+            "icon" : ""
+        },
+        {
+            "skill" : "Node JS",
+            "icon" : ""
+        },
+        {
+            "skill" : "SQL",
+            "icon" : ""
+        }
+        
+    ],
+    "Projects" : [
+        {
+            "project" : "Booker",
+            "Link" : "",
+            "image" : "",
+            "icon" : ""
+        },
+        {
+            "project" : "Movie-Time",
+            "Link" : "",
+            "image" : "",
+            "icon" : ""
+        },
+        {
+            "project" : "shop-nice",
+            "Link" : "",
+            "image" : "",
+            "icon" : ""
+        }
+    ]
+
+
+}

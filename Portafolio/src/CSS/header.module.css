@@ -2,10 +2,11 @@
 .container{
     background-color: #2A2A2A;
     margin-left: 120px;
-    margin-top: 150px;
+
 }
 
 .info{
+    padding-top: 200px;
     width: 500px;
     display: flex;
     flex-direction: column;
@@ -24,6 +25,8 @@
     grid-gap: 10px;
     font-size: 60px;
     font-weight: bold;
+    
+    
     
 }
 

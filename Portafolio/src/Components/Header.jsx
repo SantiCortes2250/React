@@ -2,7 +2,8 @@ import React from "react";
 import Nav from "./Nav";
 import styles from "../CSS/header.module.css";
 import Typewriter from "typewriter-effect";
-import image from '../Assets/img/header.png'
+import info from '../../info.json'
+
 
 export const Header = () => {
   return (
@@ -18,7 +19,6 @@ export const Header = () => {
                     strings: [
                       "Santi Rincon",
                       "Developer",
-                      "Freelancer"
                     ],
                     autoStart: true,
                     loop: true,
@@ -31,15 +31,15 @@ export const Header = () => {
           <div className={styles.contact}>
             <div className={styles.dates}>
               <h4>Email</h4>
-              <p>santicortesrincon15@gmail.com</p>
+              <p>{info.Email}</p>
             </div>
             <div className={styles.dates2}>
               <h4>Phone</h4>
-              <p>+57 300-605-2291</p>
+              <p>{info.Phone}</p>
             </div>
             <div className={styles.dates}>
               <h4>Location</h4>
-              <p>Colombia</p>
+              <p>{info.From}</p>
             </div>
           </div>
           <div className={styles.img}>
