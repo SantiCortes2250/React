@@ -4,7 +4,7 @@
     "Phone" : "+57 300-605-2291",
     "Email" : "santicortesrincon15@gmail.com",
     "Description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
-    "image" : "",
+    "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677450084/perfil_qczy0y.png",
     "Experience" : [
         {
             "company": "DevoCamp",

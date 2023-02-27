@@ -2,6 +2,7 @@ import React from "react"
 import AboutMe from "./Components/AboutMe"
 import Follow from "./Components/Follow"
 import { Header } from "./Components/Header"
+import Resume from "./Components/Resume"
 
 
 function App() {
@@ -16,8 +17,8 @@ function App() {
     <div className="Aboutme">
       <AboutMe/>
     </div>
-    <div className="Experience">
-      
+    <div className="Resume">
+      <Resume/>
     </div>
 
     </>

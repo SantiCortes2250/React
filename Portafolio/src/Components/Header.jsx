@@ -19,6 +19,7 @@ export const Header = () => {
                     strings: [
                       "Santi Rincon",
                       "Developer",
+                      "Freelancer"
                     ],
                     autoStart: true,
                     loop: true,
