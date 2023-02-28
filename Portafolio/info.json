@@ -41,23 +41,27 @@
     ],
     "Skills" : [
         {
-            "skill" : "HTML / CSS",
-            "icon" : ""
+            "skill" : "HTML",
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677559392/Projects/icons/iconHtml_ock1xp.png"
+        },
+         {
+            "skill" : "CSS",
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677559392/Projects/icons/iconCSS_x2wpis.png"
         },
         {
             "skill" : "Javascript",
-            "icon" : ""
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677559391/Projects/icons/iconJavascript_vmnpkz.png"
         },
         {
             "skill" : "React JS",
-            "icon" : ""
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677559391/Projects/icons/iconReact_gadsqd.png"
         },
         {
             "skill" : "Node JS",
             "icon" : ""
         },
         {
-            "skill" : "SQL",
+            "skill" : "Redux",
             "icon" : ""
         }
         
@@ -66,20 +70,20 @@
         {
             "project" : "Booker",
             "Link" : "",
-            "image" : "",
-            "icon" : ""
+            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677556129/Projects/portfolio_img_3_oj12nl.jpg",
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677559799/Projects/icons/iconBook_pgfveu.png"
         },
         {
             "project" : "Movie-Time",
             "Link" : "",
-            "image" : "",
-            "icon" : ""
+            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677556129/Projects/portfolio_img_2_nzqyvg.jpg",
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677559694/Projects/icons/iconMovie_xdcoyz.png"
         },
         {
             "project" : "shop-nice",
             "Link" : "",
-            "image" : "",
-            "icon" : ""
+            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677556129/Projects/portfolio_img_1_g6pras.jpg",
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677559948/Projects/icons/iconShopp_zecu80.png"
         }
     ]
 
