@@ -6,7 +6,8 @@
 
 .header{
   width: 100%;
-  height: 42rem;
-  background-color: #2A2A2A;
+  height: 45rem;
+  background-image: url(./Assets/img/background5.jpg);
+  background-size:cover;
 }
 
