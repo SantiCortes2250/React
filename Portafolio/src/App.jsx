@@ -4,6 +4,10 @@ import Follow from "./Components/Follow"
 import { Header } from "./Components/Header"
 import Projects from "./Components/Projects"
 import Resume from "./Components/Resume"
+import Contact from "./Components/Contact"
+import Footer from "./Components/Footer"
+
+
 
 
 
@@ -31,6 +35,12 @@ function App() {
     </div>
     <div className="projects">
       <Projects/>
+    </div>
+    <div className="Contact">
+      <Contact/>
+    </div>
+    <div className="footer">
+      <Footer/>
     </div>
 
     </>

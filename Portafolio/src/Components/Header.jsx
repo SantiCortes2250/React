@@ -19,7 +19,7 @@ export const Header = () => {
                     strings: [
                       "Santi Rincon",
                       "Developer",
-                      "Freelancer"
+                      "Freelancer",
                     ],
                     autoStart: true,
                     loop: true,
@@ -42,9 +42,6 @@ export const Header = () => {
               <h4>Location</h4>
               <p>{info.From}</p>
             </div>
-          </div>
-          <div className={styles.img}>
-            <img src='' alt="" />
           </div>
         </div>
     </>

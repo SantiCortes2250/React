@@ -7,11 +7,12 @@ const Resume = () => {
 
   return (
     <div className={style.container}>
-      <div>
+      <div className={style.cards}>
         <h2>Experience</h2>
         {
           info.Experience.map((expe, index) => (
             <div key={index}>
+              <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1677974346/Projects/icons/flecha_jw9v6e.png" alt="" className={style.img}/>
               <div className={style.info}>
               <h4>{expe.company}</h4>
               <p>{expe.year}</p>
@@ -21,11 +22,12 @@ const Resume = () => {
           ))
         }
       </div>
-      <div>
+      <div className={style.cards}>
         <h2>Education</h2>
         {
           info.Education.map((edu, index) => (
             <div key={index}>
+              <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1677974346/Projects/icons/flecha_jw9v6e.png" alt="" className={style.img}/>
               <div className={style.info}>
                 <h4>{edu.certificate}</h4>
                 <p>{edu.year}</p>
