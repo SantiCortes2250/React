@@ -5,13 +5,18 @@ import style from '../CSS/contact.module.css'
 const Contact = () => {
   return (
     <div className={style.container}>
+      <h2 className={style.section}>
+        Get in Touch
+        <span className={style.title}> Contact </span>
+
+      </h2>
       <div className={style.form}>
         <h2>Message Me</h2>
         <form>
-        <input type="text" placeholder='Name'/>
-        <input type="text" placeholder='Email'/>
-        <input type="text" placeholder='Mesaje'/>
-        <textarea name="" id="" cols="30" rows="10" placeholder='Message'/>
+        <input type="text" placeholder='Name' required/>
+        <input type="email" placeholder='Email' required/>
+        <input type="text" placeholder='Subject' required/>
+        <textarea name="" id="" cols="30" rows="10" placeholder='Message' required/>
         <button>Send Message</button>
         </form>
       </div>

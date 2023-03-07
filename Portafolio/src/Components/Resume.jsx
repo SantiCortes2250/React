@@ -7,6 +7,14 @@ const Resume = () => {
 
   return (
     <div className={style.container}>
+      <h2 className={style.section}>
+        My Resume
+        <span className={style.title}> Resume </span>
+
+      </h2>
+      <div className={style.card}>
+
+      </div>
       <div className={style.cards}>
         <h2>Experience</h2>
         {

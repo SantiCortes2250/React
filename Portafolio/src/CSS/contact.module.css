@@ -1,17 +1,50 @@
 .container{
-    background-color: #101010;
     display: flex;
 
     flex-direction: column;
  
-    height: 60rem;
+    height: 68rem;
     grid-gap: 50px;
     padding-left: 30px;
+    
 
+  
+
+}
+
+.section{
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+    font-weight: 700;
+    letter-spacing: -.25px;
+    line-height: 100%;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-top: 20px;
+    
+
+}
+
+.title{
+
+    font-family: 'Roboto';
+    font-weight: 900;
+    position: absolute;
+    left: -6px;
+    color: transparent;
+    font-size: 70px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.5px rgba(135, 135, 135, 0.575) ;
+    z-index: -1;
 }
 
 .form{
     color: white;
+    margin-top: 100px;
+ 
 }
 .form form{
     color: white;
@@ -34,10 +67,12 @@
     padding: 7px 0px 7px 15px;
     color: white;
     font-size: 17px;
+    font-family: 'Rajdhani', sans-serif;
 
 }
 
 .form textarea{
+    font-family: 'Rajdhani', sans-serif;
     outline: none;
     background-color: #2d2d2d57;
     border: none;
@@ -46,6 +81,7 @@
     padding: 7px 0px 7px 15px;
     color: white;
     font-size: 17px;
+   
 }
 
 .form input:focus{
@@ -69,6 +105,7 @@
     font-size: 17px;
     border: none;
     cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
     
 }
 

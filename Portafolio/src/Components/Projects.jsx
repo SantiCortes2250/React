@@ -5,6 +5,11 @@ import styles from '../CSS/projects.module.css'
 const Projects = () => {
   return (
     <div className={styles.container}>
+       <h2 className={styles.section}>
+        My Projects
+        <span className={styles.title}> Project </span>
+
+      </h2>
       <div className={styles.cards}>
         {info.Projects.map((project, index) =>(
             <div key={index} className={styles.card}>

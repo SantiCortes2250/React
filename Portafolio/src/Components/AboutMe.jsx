@@ -6,6 +6,11 @@ import info from '../../info.json'
 const AboutMe = () => {
   return (
     <div className={styles.container}>
+      <h2 className={styles.section}>
+        About me
+        <span className={styles.title}> About </span>
+
+      </h2>
       <div className={styles.img}>
         <img src={image} alt="" />
       </div>

@@ -14,6 +14,7 @@ export const Header = () => {
             <p>Hi There!</p>
             <div className={styles.writer}>
             I am
+         
             <Typewriter
                   options={{
                     strings: [

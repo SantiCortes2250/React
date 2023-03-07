@@ -8,6 +8,7 @@
   flex-direction: row;
   justify-content: space-between;
   top: 0;
+
 }
 
 .logo {
@@ -23,6 +24,7 @@
 
 .links {
   padding: 0px 10px;
+ 
 }
 
 .links button {
@@ -45,6 +47,7 @@
   text-decoration: none;
   color: #c7c7c7;
   font-weight: 500;
+
 }
 
 .linksN a:hover {
@@ -63,6 +66,7 @@
   background-color: rgba(0, 0, 0, 0.834);
   height: 230px;
   transform: translatex(-300px);
+
 }
 
 .navOpen {
@@ -78,6 +82,8 @@
   height: 230px;
   transform: translateX(0px);
   transition: all 0.8s;
+  z-index: 2;
+  
 }
 
 .navOpen a {
@@ -85,4 +91,5 @@
   color: white;
   font-size: 18px;
   font-weight: 800;
+  font-family: 'Rajdhani', sans-serif;
 }

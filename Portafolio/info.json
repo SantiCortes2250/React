@@ -42,27 +42,27 @@
     "Skills" : [
         {
             "skill" : "HTML",
-            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677559392/Projects/icons/iconHtml_ock1xp.png"
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1678151821/Projects/icons/html-5_1_iva7el.png"
         },
          {
             "skill" : "CSS",
-            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677559392/Projects/icons/iconCSS_x2wpis.png"
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1678152373/Projects/icons/css-3_2_oa9uvr.png"
         },
         {
             "skill" : "Javascript",
-            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677559391/Projects/icons/iconJavascript_vmnpkz.png"
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1678152117/Projects/icons/js_o6nyki.png"
         },
         {
             "skill" : "React JS",
-            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677559391/Projects/icons/iconReact_gadsqd.png"
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1678152076/Projects/icons/fisica_1_wexe1t.png"
         },
         {
             "skill" : "Node JS",
-            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677625546/Projects/icons/iconNode_kzwetr.png"
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1678151745/Projects/icons/node_ucljkh.png"
         },
         {
             "skill" : "Redux",
-            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677625464/Projects/icons/iconRedux_rawin4.png"
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1678151735/Projects/icons/redux_sd5vlv.png"
         }
         
     ],

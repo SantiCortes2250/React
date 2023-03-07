@@ -6,6 +6,8 @@ import Projects from "./Components/Projects"
 import Resume from "./Components/Resume"
 import Contact from "./Components/Contact"
 import Footer from "./Components/Footer"
+import Skills from "./Components/Slick/Skills"
+
 
 
 
@@ -22,27 +24,19 @@ function App() {
     <>
     <Follow/>
     <div className="header">
+      
       <Header/>
     </div>
-    <div className="Aboutme">
+    <div className="main">
       <AboutMe/>
-    </div>
-    <div className="Resume">
       <Resume/>
-    </div>
-    <div className="skills">
-      
-    </div>
-    <div className="projects">
+      <Skills/>
       <Projects/>
-    </div>
-    <div className="Contact">
+   
+      
       <Contact/>
-    </div>
-    <div className="footer">
-      <Footer/>
-    </div>
-
+    </div>  
+    <Footer/>
     </>
   )
 }

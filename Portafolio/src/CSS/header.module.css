@@ -1,6 +1,7 @@
 
 .container{
     width: 100%;
+    font-family: 'Rajdhani', sans-serif;
 
 }
    
@@ -13,19 +14,28 @@
     flex-direction: column;
     color: white;
     grid-gap: 15px;
+
+    
 }
 
 .info p{
     line-height: 20px;
     font-size: 30px;
+    
 }
 
 .writer{
     display: flex;
     flex-direction: row;
-    grid-gap: 10px;
-    font-size: 37px;
-    font-weight: bolder;
+    gap: 5px;
+    font-family: 'Roboto';
+    font-weight: 900;
+    color: transparent;
+    font-size: 30px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px rgb(255, 255, 255) ;
+    
 }
 
 .info button{
@@ -34,9 +44,10 @@
     height: 50px;
     background-color: #009E66;
     color: white;
-    font-size: 17px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 .info button:hover{
@@ -51,6 +62,8 @@
     margin-top: 50px;
     grid-gap: 30px;
     padding-left: 20px;
+
+ 
 }
 
 .contact h4{
@@ -70,6 +83,7 @@
     grid-gap: 20px;
     border-left: 2px solid white;
     padding-left: 20px;
+    
 }
 
 .dates2{
