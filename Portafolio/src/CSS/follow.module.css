@@ -3,13 +3,13 @@
     top: 50%;
     left: -120px;
     position: fixed;
-    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     transform: rotate(90deg);
     color: white;
     display: none;
+    font-family: 'Rajdhani', sans-serif;
 
     
 }
@@ -31,4 +31,11 @@
     margin-right:10px ;
 }
 
+
+@media (min-width: 1200px) {
+   .container{
+    display: flex;
+   }
+
+}
 

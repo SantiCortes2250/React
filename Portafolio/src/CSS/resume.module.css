@@ -42,12 +42,20 @@
    
 }
 
-.card{
-    height: 100px;
+.cardsC{
+    margin-top: 100px;
 }
 .cards{
     width: 85%;
   
+}
+
+.cardsC{
+    padding-left: 30px;
+ 
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
 }
 
 .container h2{
@@ -88,4 +96,73 @@
     position: absolute;
     margin-top: 30px;
 }
+
+
+@media (min-width: 600px) {
+ 
+  
+    .section {
+        left: 40px;
+        font-weight: 900;
+        font-size: 40px !important;
+    }
+  
+  
+    .title{
+        font-size: 90px;
+    }
+
+
+    .container h2{
+      
+        font-size: 35px;
+    
+    }
+
+    .info h4{
+        width: 90%;
+        font-size: 23px;
+      
+    
+    }
+    
+    .info p{
+        font-size: 20px;
+     
+    }
+    
+  
+  
+    
+  }
+
+  
+@media (min-width: 1200px) {
+    .section {
+      left: 80px;
+  
+    }
+
+    
+.cardsC{
+
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+
+}
+
+
+
+
+
+
+
+
+   
+  
+  
+    
+  
+  }
 

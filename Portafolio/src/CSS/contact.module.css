@@ -44,13 +44,29 @@
 .form{
     color: white;
     margin-top: 100px;
+   
  
 }
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+
+}
 .form form{
+
     color: white;
     display: flex;
     flex-direction: column;
     grid-gap: 20px;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+
 }
 
 .form h2{
@@ -151,3 +167,102 @@
     margin-bottom: 5px;
     
 }
+
+@media (min-width: 600px) {
+    .container{
+       
+        padding-left: 40px;
+        
+    
+      
+    
+    }
+
+    .form h2{
+       font-size: 27px;
+    }
+
+    
+ 
+  
+    .section {
+        left: 40px;
+        font-weight: 900;
+        font-size: 40px;
+    }
+  
+  
+    .title{
+        font-size: 90px;
+    }
+
+    .email{
+        flex-direction: row;
+        width: 87%;
+        
+    }
+
+    
+.containerInfo h2{
+    font-size: 25px;
+    
+}
+
+.containerInfo p{
+   font-size: 20px;
+
+}
+
+    .info h4{
+      
+        font-size: 22px;
+     
+    }
+
+    .icons{
+    
+        grid-gap: 53px;
+ 
+    }
+  
+  
+    
+  }
+
+  
+@media (min-width: 1200px) {
+
+    .container{
+     
+        height: 40rem;
+     
+
+    
+    }
+    .section {
+      left: 80px;
+  
+    }
+
+    .forms{
+        display: flex;
+        flex-direction: row;
+        padding-left: 50px;
+        align-items: center;
+    
+    }
+
+    .form{
+        width: 50%;
+    }
+
+
+
+
+
+   
+  
+  
+    
+  
+  }

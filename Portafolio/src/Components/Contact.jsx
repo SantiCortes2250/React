@@ -10,11 +10,16 @@ const Contact = () => {
         <span className={style.title}> Contact </span>
 
       </h2>
+      <div className={style.forms}>
       <div className={style.form}>
         <h2>Message Me</h2>
         <form>
-        <input type="text" placeholder='Name' required/>
-        <input type="email" placeholder='Email' required/>
+          <div className={style.email}>
+          <input type="text" placeholder='Name' required />
+          <input type="email" placeholder='Email' required />
+
+          </div>
+       
         <input type="text" placeholder='Subject' required/>
         <textarea name="" id="" cols="30" rows="10" placeholder='Message' required/>
         <button>Send Message</button>
@@ -46,6 +51,9 @@ const Contact = () => {
 
 
       </div>
+
+      </div>
+     
     </div>
   )
 }
