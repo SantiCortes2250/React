@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react"
 
-export const Footer = () => {
+const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className='footer'>
+        <p>© Copyright Movie-Time    |    Developed by Santi Rincon    |    All rights reserved</p>
+    </div>
   )
 }
+
+export default Footer

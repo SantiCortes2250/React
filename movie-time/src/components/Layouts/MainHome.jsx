@@ -6,9 +6,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../stylesSlider/slick2.css";
 import { SliderMovies } from '../UI/SliderMovies';
-import { MdLocalMovies } from 'react-icons/md'
 import { VideoMovie } from '../UI/VideoMovie';
-
+import UpcomingMovies from '../UI/UpcomingMovies';
+import Trending from '../UI/Trending';
+import Title from '../UI/Title';
 
 
 
@@ -119,13 +120,14 @@ export const MainHome = () => {
             />
           ))}
         </Slider>
-        <div className="container_title_movies">
-          <MdLocalMovies className='icon_container_movie_title' />
-          <p className='p_container_movie_ti'>Latest</p>
-          <p className='p2_container_movie_title'>Movies</p>
-        </div>
+        <Title title='Latest'/>
         <SliderMovies />
+        <Title title='Upcoming'/>
+        <UpcomingMovies/>
+        <Title title='Trending'/>
+        <Trending/>
       </div>
+
     </>
 
   )
