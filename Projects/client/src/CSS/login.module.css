@@ -1,0 +1,108 @@
+.login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+    width: 90%;
+    
+    bottom: 20px;
+    margin-bottom: 20px;
+    padding: 30px 0px 0px 0px;
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.p{
+    position: absolute;
+    bottom: 10px;
+
+}
+
+.form form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+
+.title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+
+.container {
+    display: flex;
+    
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 80%;
+  }
+  
+  .container input {
+    font-size: 15px;
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+  }
+  
+  .container label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+   
+  }
+  
+  .container input:focus ~ label,
+  .container input:valid ~ label {
+    top: -20px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+  }
+  
+  .container input:focus ~ .underline,
+  .container input:valid ~ .underline {
+    transform: scaleX(1);
+  }
+
+
+  .btn{
+  
+    width: 50%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+
+  }
+
+ 

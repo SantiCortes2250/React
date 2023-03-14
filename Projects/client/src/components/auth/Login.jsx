@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom'
+import styles from '../../CSS/login.module.css'
 
 
 const Login = () => {
@@ -30,24 +31,27 @@ const Login = () => {
 
   
   return (
-    <div>
-      <div>
-        <h1>LOG IN</h1>
+    <div className={styles.login}>
+      <div className={styles.form}>
+        <div className={styles.title}>
+          <h1>Hello</h1>
+          <p>Sign into your Acoount</p>
+        </div>
         <form
         onSubmit={HandleSubmit}
         >
-          <div>
-            <label>Email</label>
+          <div className={styles.container}>
             <input 
-            type="email"
+           
             name='email'
-            id='email'
+            id='input'
             value={email}
             onChange={HandleChange}
              />
+            <label className={styles.label} htmlFor='input'>Email*</label>
+            <div className={styles.underline}></div>
           </div>
-          <div>
-            <label>Password</label>
+          <div className={styles.container}>
             <input 
             type="password"
             name='password'
@@ -55,13 +59,16 @@ const Login = () => {
             value={password}
             onChange={HandleChange}
              />
+            <label className={styles.label}  htmlFor='password'>Password*</label>
+            <div className={styles.underline}></div>
           </div>
-          <button>Log in</button>
+          <button className={styles.btn}>Log in</button>
         </form>
-        <NavLink to={'/new-account'}>
-          New Account
-        </NavLink>
       </div>
+      <p className={styles.p}>Don't have an account? <NavLink to={'/new-account'}>
+          New Account
+        </NavLink></p>
+      
     </div>
   )
 }

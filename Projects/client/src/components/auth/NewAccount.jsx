@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom'
+import styles from '../../CSS/login.module.css'
 
 const NewAccount = () => {
   const [newUser, setnewUser] = useState({
@@ -36,24 +37,26 @@ const NewAccount = () => {
 
   
   return (
-    <div>
-      <div>
-        <h1>CREATE ACCOUNT</h1>
+    <div className={styles.login}>
+      <div className={styles.form}>
+        <div className={styles.title}>
+          <p>Create Account</p>
+        </div>
         <form
         onSubmit={HandleSubmit}
         >
-          <div>
-            <label>Name</label>
+          <div className={styles.container}>
             <input 
-            type="text"
+      
             name='name'
             id='name'
             value={name}
             onChange={HandleChange}
              />
+            <label className={styles.label} htmlFor='input'>Email*</label>
+            <div className={styles.underline}></div>
           </div>
-          <div>
-            <label>Email</label>
+          <div className={styles.container}>
             <input 
             type="email"
             name='email'
@@ -61,9 +64,10 @@ const NewAccount = () => {
             value={email}
             onChange={HandleChange}
              />
+            <label className={styles.label} htmlFor='input'>Name*</label>
+            <div className={styles.underline}></div>
           </div>
-          <div>
-            <label>Password</label>
+          <div className={styles.container}>
             <input 
             type="password"
             name='password'
@@ -71,9 +75,10 @@ const NewAccount = () => {
             value={password}
             onChange={HandleChange}
              />
+            <label className={styles.label} htmlFor='input'>Password*</label>
+            <div className={styles.underline}></div>
           </div>
-          <div>
-            <label>Confirm Password </label>
+          <div className={styles.container}>
             <input 
             type="password"
             name='confirmP'
@@ -81,13 +86,15 @@ const NewAccount = () => {
             value={confirmP}
             onChange={HandleChange}
              />
+            <label className={styles.label} htmlFor='input'>Repeat Password*</label>
+            <div className={styles.underline}></div>
           </div>
-          <button>Register</button>
+          <button className={styles.btn}>Register Now</button>
         </form>
-        <NavLink to={'/new-account'}>
-          Log in
-        </NavLink>
       </div>
+      <p className={styles.p}>Already have an account? <NavLink to={'/'}>
+          New Account
+        </NavLink></p>
     </div>
   )
 }

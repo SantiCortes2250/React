@@ -1,23 +1,23 @@
 import React from 'react'
+import Card from '../layout/Card'
+import Nav from '../layout/Nav'
+import styles from '../../CSS/dashboard.module.css'
+import Sidebar from '../layout/Sidebar'
+
 
 const Dashboard = () => {
   return (
-    <div>
-      <div className="cards">
-        <div className="card">
-          <div className="info">
-            <p>nombre proyecto</p>
-            <h2>Nombre Tarea</h2>
-            <p>Estado</p>
-          </div>
-          <div className="modificar">
-            <button>borrar</button>
-            <button>Editar</button>
-          </div>
-          
-        </div>
+    <>
+      <Nav/>
+      <Sidebar/>
+      <div className={styles.container}>
+        <Card/>
+        <Card/>
+        <Card/>
       </div>
-    </div>
+
+    </>
+   
   )
 }
 

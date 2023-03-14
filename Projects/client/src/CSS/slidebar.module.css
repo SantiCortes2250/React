@@ -1,0 +1,21 @@
+.slidebar{
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 250px;
+    background-color: #212529;
+
+}
+
+.logo{
+    height: 70px;
+    border-bottom: 1px solid #E3E3E3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-gap: 30px;
+}
+
+
