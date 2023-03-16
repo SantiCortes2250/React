@@ -93,7 +93,7 @@ const NewAccount = () => {
         </form>
       </div>
       <p className={styles.p}>Already have an account? <NavLink to={'/'}>
-          New Account
+          Log in
         </NavLink></p>
     </div>
   )

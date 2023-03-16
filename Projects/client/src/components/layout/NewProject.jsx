@@ -1,8 +1,10 @@
 import React from 'react'
+import styles from '../../CSS/newproject.module.css'
 
-const NewProject = () => {
+
+const NewProject = ({more}) => {
   return (
-    <div>
+    <div className={more % 2 == 0 ? styles.on : styles.off}>
         <form>
             <input 
             type="text"

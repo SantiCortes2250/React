@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from "../../CSS/nav.module.css"
 
-const Nav = () => {
+const Nav = ({setBar}) => {
+
+
   return (
     <div className={styles.nav}>
-        <div className={styles.slidebar}>
+        <div className={styles.slidebar} onClick={e=> setBar(true)}>
           <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678746605/Projects/icons/menu-hamburguesa_kii38c.png" alt="" />
             
         </div>

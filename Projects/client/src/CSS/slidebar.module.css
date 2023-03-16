@@ -6,16 +6,147 @@
     height: 100vh;
     width: 250px;
     background-color: #212529;
+    margin-left: 0px;
+    transition: all 1s;
+    
+   
 
 }
 
+.slidebaroff{
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 250px;
+    background-color: #212529;
+    margin-left: -300px;
+    transition: all 1s;
+
+}
+
+
+
 .logo{
-    height: 70px;
-    border-bottom: 1px solid #E3E3E3;
+    height: 80px;
+    border-bottom: 1px solid #707070;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     grid-gap: 30px;
 }
 
+.close{
+    width: 30px;
+    margin-right: 20px;
+}
 
+.imgLogo{
+    width: 100px;
+    margin-left: 10px;
+   
+
+}
+
+.enlaces{
+    width: 100%;
+    height: 100%;
+    padding: 20px 0px 0px 10px;
+
+}
+
+.enlaces p{
+    width: 95%;
+    color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    font-size: 20px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+
+}
+
+.enlaces p:hover{
+    transition: 1s all;
+    background-color: #494C50;
+   
+
+}
+
+.enlaces p img{
+    width: 25px;
+}
+
+
+.img{
+    margin-left: 35px;
+    width: 15px !important;
+}
+
+.more{
+    margin-left: 70px;
+    width: 15px !important;
+    transition: 0.7s all;
+    transform: rotate(0deg);
+    
+   
+
+}
+
+.more1{
+    margin-left: 70px;
+    width: 15px !important;
+    transform: rotate(90deg);
+  
+
+}
+
+
+
+.projects2{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    font-size: 17px;
+    padding: 0px 0px 10px 15px;
+
+ 
+
+    
+}
+
+
+.projects{
+   
+    display: none;
+
+    
+}
+
+.projects2 a{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    color: rgb(156, 156, 156);
+    grid-gap: 10px;
+    width: 80%;
+}
+
+.projects2 a img{
+    width: 20px;
+}
+
+
+
+
+.projects2 a:hover{
+    border-bottom: 2px solid white;
+    color: white;
+   
+
+}
