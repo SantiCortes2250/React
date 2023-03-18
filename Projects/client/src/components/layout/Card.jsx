@@ -11,8 +11,8 @@ const Card = () => {
         <span>Estate</span>
         </div>
         <div className={styles.action}>
-        <button><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678768158/Projects/icons/editar_nleyp1.png" alt="" /></button>
-        <button><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678768160/Projects/icons/bote-de-basura_erizji.png" alt="" /></button>
+          
+        
         </div>
     </div>
   )

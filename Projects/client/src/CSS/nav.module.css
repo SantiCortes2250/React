@@ -1,4 +1,5 @@
 .nav{
+    position: fixed;
     display: flex;
     flex-direction: row;
     height: 70px;
@@ -6,7 +7,6 @@
     background-color: #212529;
     border-bottom: 1px solid #707070;
     align-items: center;
-
 }
 
 .slidebar{

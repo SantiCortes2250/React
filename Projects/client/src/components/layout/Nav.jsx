@@ -1,7 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styles from "../../CSS/nav.module.css"
 
-const Nav = ({setBar}) => {
+const Nav = ({open, setOpen, setBar}) => {
+
+  
+
+
 
 
   return (
@@ -16,7 +20,8 @@ const Nav = ({setBar}) => {
           
 
         </div>
-        <div className={styles.profile}>
+        <div className={styles.profile}
+          onClick={e =>setOpen(open + 1)}>
           <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678747316/Projects/icons/usuario_pkvbnb.png" alt="" />
            
 

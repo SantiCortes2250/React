@@ -1,6 +1,9 @@
 import React,{useState} from 'react'
 import NewProject from './NewProject'
 import styles from '../../CSS/slidebar.module.css'
+import { NavLink } from 'react-router-dom'
+
+
 
 const Sidebar = ({setBar, bar}) => {
 
@@ -16,10 +19,10 @@ const Sidebar = ({setBar, bar}) => {
           <img className={styles.close} src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678939305/Projects/icons/flecha-i_qhmyxj.png" alt="" onClick={e=> setBar(false)}/>
         </div>
         <div className={styles.enlaces}>
-            <p><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678933181/Projects/icons/home_na0ym5.png" alt="" />Dashboard</p>
+          <NavLink to={'/Dashboard'}><p><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678933181/Projects/icons/home_na0ym5.png" alt="" />Dashboard</p></NavLink>
             <p onClick={e =>setMore(more + 1)}><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678933263/Projects/icons/categories_qwkaah.png" alt="" />Projects <img className={more % 2 == 0 ? styles.more : styles.more1} src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678934611/Projects/icons/expand_lek08a.png" alt="" /></p>
             <div className={more % 2 == 0 ? styles.projects2 : styles.projects}>
-                <a><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678935396/Projects/icons/flecha_c65oeq.png" alt="" /> Proyecto React</a>
+            <NavLink to={'/Projects'}><a><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678935396/Projects/icons/flecha_c65oeq.png" alt="" /> Proyecto React</a> </NavLink>
                 <a><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678935396/Projects/icons/flecha_c65oeq.png" alt="" />Proyecto React</a>
                 <a><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678935396/Projects/icons/flecha_c65oeq.png" alt="" />Proyecto React</a>
             </div>
