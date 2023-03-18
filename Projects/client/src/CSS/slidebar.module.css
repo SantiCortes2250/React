@@ -8,6 +8,8 @@
     background-color: #212529;
     margin-left: 0px;
     transition: all 1s;
+    z-index: 2;
+   
     
    
 
@@ -23,6 +25,7 @@
     background-color: #212529;
     margin-left: -300px;
     transition: all 1s;
+    z-index: 2;
 
 }
 

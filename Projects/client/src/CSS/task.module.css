@@ -34,7 +34,7 @@
     left: -52px;
     position: absolute;
     transform: rotateZ(45deg);
-    z-index: 100;
+  
   }
   
   .checkBox input[type=checkbox]:checked + div {
@@ -50,4 +50,8 @@
   
   .transition {
     transition: 300ms ease;
+  }
+
+  .edit img{
+    width: 20px;
   }
