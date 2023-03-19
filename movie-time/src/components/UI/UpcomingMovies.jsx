@@ -4,7 +4,7 @@ import { Imagenes } from "./Imagenes";
 import Slider from "react-slick";
 import "../../stylesSlider/slick.css";
 import "slick-carousel/slick/slick.css";
-import { AiFillPlayCircle } from "react-icons/ai";
+
 
 const UpcomingMovies = () => {
   const settings2 = {
@@ -19,7 +19,7 @@ const UpcomingMovies = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
@@ -28,17 +28,17 @@ const UpcomingMovies = () => {
       {
         breakpoint: 748,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
-          initialSlide: 2,
+          initialSlide: 1,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
-          initialSlide: 2,
+          initialSlide: 1,
         },
       },
       {
@@ -71,17 +71,14 @@ const UpcomingMovies = () => {
           {movies.map((item) => (
             <div key={item.id} className="upcoming_card">
               <div className="upcoming_img">
-                <div className="icon_img">
-                  <AiFillPlayCircle className="icon" />
-                </div>
                 <Imagenes url={`${URL_IMAGE + item.poster_path}`} />
-                
               </div>
               <div className="upcoming_info">
                 <h4>{item.title}</h4>
                 <div className="p_upcoming">
                   <p>{item.overview}</p>
                 </div>
+                <button className="btn_upcoming">More Info</button>
               </div>
             </div>
           ))}

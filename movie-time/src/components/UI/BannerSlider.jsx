@@ -2,6 +2,7 @@ import React from "react";
 import { Imagenes } from "./Imagenes";
 import { AiFillPlayCircle } from "react-icons/ai";
 
+
 export const BannerSlider = ({ item, onSendData }) => {
   const { id, title, backdrop_path, overview } = item;
 
@@ -10,7 +11,9 @@ export const BannerSlider = ({ item, onSendData }) => {
 
   return (
     <>
+    
       <div className="container_banner_movie">
+   
         <Imagenes url={`${URL_IMAGE + backdrop_path}`}></Imagenes>
         <div className="container_info_movie">
           <h1>{title}</h1>

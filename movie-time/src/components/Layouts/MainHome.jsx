@@ -14,6 +14,7 @@ import Title from '../UI/Title';
 
 
 
+
 export const MainHome = () => {
 
   const settings = {
@@ -99,6 +100,7 @@ export const MainHome = () => {
 
   return (
     <>
+
     {playing ? (
         <VideoMovie
         trailer={trailer}

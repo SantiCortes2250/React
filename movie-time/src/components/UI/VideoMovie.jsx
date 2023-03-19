@@ -6,6 +6,9 @@ export const VideoMovie = ({trailer, onClick }) => {
 
   return (
     <div className='youtube-container' onClick={onClick}>
+       <h1 onClick={onClick} className="btn_trailer_movie">
+        x
+      </h1>
       <YouTube
         videoId={trailer.key}
         className="reproductor container"
@@ -24,9 +27,7 @@ export const VideoMovie = ({trailer, onClick }) => {
           },
         }}
       />
-      <h1 onClick={onClick} className="btn_trailer_movie">
-        x
-      </h1>
+     
     </div>
   )
 }
