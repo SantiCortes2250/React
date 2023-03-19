@@ -4,6 +4,7 @@ import { Imagenes } from "./Imagenes";
 import Slider from "react-slick";
 import "../../stylesSlider/slick.css";
 import "slick-carousel/slick/slick.css";
+import { NavLink } from 'react-router-dom';
 
 const Trending = () => {
 
@@ -11,10 +12,17 @@ const Trending = () => {
 
     const [movies, setMovies] = useState([]);
   
+
+   
+
+   
+  
     const loadMovies = async () => {
       const { data } = await getMovies();
       setMovies(data.results);
     };
+
+   
   
     useEffect(() => {
       loadMovies();
@@ -40,7 +48,11 @@ const Trending = () => {
                 <div className="p_tranding">
                   <p>{item.overview}</p>
                 </div>
-                <button>More Info</button>
+                <NavLink to={"/Movie/" + item.title}>
+                <button>
+                    More Info
+                  </button>
+                </NavLink>
               </div>
             </div>
           ))}

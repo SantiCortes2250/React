@@ -9,6 +9,7 @@ import{
 
 import { Home } from './components/Pages/Home';
 import { Movies } from './components/Pages/Movies';
+import Movie from './components/Layouts/Movie';
 
 
 
@@ -18,6 +19,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='Movies/:name' element={<Movies/>}/>
+      <Route path='Movie/:name' element={<Movie/>}/>
     </Routes>
     </BrowserRouter>
   );
