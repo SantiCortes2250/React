@@ -55,8 +55,8 @@ const Form = () => {
   return (
     <form
     onSubmit={HandleSubmit}
-    className='col-12'>
-        <fieldset className='center'>
+    className=''>
+        <fieldset className=''>
             <legend>Search drinks for category or ingredient</legend>
 
         </fieldset>
@@ -65,7 +65,7 @@ const Form = () => {
             <div className="col-md-4">
                 <input 
                 type="text"
-                className='form-control'
+                className=''
                 name='name'
                 placeholder='search ingredients' 
                 onChange={HandleChange}
@@ -75,7 +75,7 @@ const Form = () => {
             <div className="col-md-4">
                
                 <select
-                className='form-control'
+                className=''
                 name='category'
                 onChange={HandleChange}
                 >
@@ -88,10 +88,10 @@ const Form = () => {
                     ))}   
                 </select>
             </div>
-            <div className="col-md-4">
+            <div className="">
                 <input 
                 type="submit"
-                className='btn btn-block btn-primary' 
+                className='' 
                 value='search drinks'
                 />
             </div>

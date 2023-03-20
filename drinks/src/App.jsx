@@ -1,8 +1,9 @@
 import { useState } from "react";
-import Form from "./Components/Form";
+import About from "./Components/About";
 import Header from "./Components/Header";
-import ListRecipes from "./Components/ListRecipes";
+import Popular from "./Components/Popular";
 import CategoriesProvider from "./context/CategoriesContext";
+
 import ModalProvider from "./context/ModalContext";
 import RecipesProvider from "./context/RecipesContext";
 
@@ -12,13 +13,8 @@ function App() {
       <RecipesProvider>
         <ModalProvider>
           <Header />
-
-          <div className="container mt-5">
-            <div className="row">
-              <Form />
-            </div>
-            <ListRecipes />
-          </div>
+          <About />
+          <Popular />
         </ModalProvider>
       </RecipesProvider>
     </CategoriesProvider>

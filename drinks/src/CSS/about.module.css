@@ -1,0 +1,18 @@
+.container{
+    width: 100%;
+    background-color: #0F1921;
+    color: white;
+    margin-top: -7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px 50px 0px;
+    grid-gap: 10px;
+
+}
+
+.container p{
+    line-height: 2;
+    width: 80%;
+}

@@ -7,13 +7,13 @@ const Recipe = ({recipe}) => {
     const {setIdrecipe} = useContext(ModalContext)
 
   return (
-    <div className="col-md-4 mb-3">
-        <div className="card">
-            <h2 className="card-header">{recipe.strDrink}</h2>
+    <div className="">
+        <div className="">
+            <h2 className="">{recipe.strDrink}</h2>
 
-            <img src={recipe.strDrinkThumb} alt={`Image de ${recipe.strDrink}`} className="card-img-top" />
+            <img src={recipe.strDrinkThumb} alt={`Image de ${recipe.strDrink}`} className="" />
 
-            <div className="card-body">
+            <div className="">
                 <button
                     type='button'
                     className='btn btn-block btn-primary'
