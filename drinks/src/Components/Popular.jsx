@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from 'react'
-import axios from "axios";
+import React, {useContext} from 'react'
+import { DrinksContext } from '../context/PopularContext'
+import Recipe from './Recipe'
+import {settings2} from '../Helpers/slider'
+import Slider from "react-slick";
+import "../CSS/stylesSlider/slick.css"; 
+import "slick-carousel/slick/slick.css"; 
+import styles from '../CSS/popular.module.css'
 
 
 const Popular = () => {
 
-    
-    const [drinks, setDrinks] = useState([])
-    console.log(drinks)
+  const {drinks} = useContext(DrinksContext)
 
-    useEffect(() => {
-
-        const callApi = async () =>{
-            const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'
-
-            const {data} = await axios.get(url)
-            setDrinks(data.drinks)
-
-        }
-
-        callApi()
-      
-    }, [])
     
   return (
-    <div>Popular</div>
+    <div className={styles.container}>
+      <h2>Popular Drinks</h2>
+       <Slider {...settings2}>
+        {drinks.map(recipe => (
+        <Recipe key={recipe.idDrink} recipe={recipe}/>
+        ))}
+
+       </Slider>
+   
+  </div>
   )
 }
 

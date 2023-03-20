@@ -1,0 +1,30 @@
+.container{
+    background-image: url('https://res.cloudinary.com/dhbi86hxn/image/upload/v1679281076/Projects/Banners/Banner4_mwem8j.jpg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  
+  
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+    color: white;
+   
+    background-color: rgba(0, 0, 0, 0.54);
+    
+
+    padding: 70px 10px 70px 40px;
+}
+.info h2{
+    font-size: 40px;
+    width: 100%;
+}
+
+.info p{
+    width: 80%;
+    font-size: 20px;
+}

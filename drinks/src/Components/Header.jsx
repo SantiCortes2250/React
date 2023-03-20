@@ -1,7 +1,7 @@
 import React from 'react'
 import images from '../Helpers/ImagesBanner'
 import styles from '../CSS/header.module.css'
-import settings from '../Helpers/slider'
+import {settings} from '../Helpers/slider'
 import Slider from "react-slick";
 import "../CSS/stylesSlider/slick.css"; 
 import "slick-carousel/slick/slick.css"; 

@@ -1,23 +1,31 @@
-import { useState } from "react";
 import About from "./Components/About";
 import Header from "./Components/Header";
 import Popular from "./Components/Popular";
-import CategoriesProvider from "./context/CategoriesContext";
+import Recipes from "./Components/Recipes";
+import PopularContext from "./context/PopularContext";
 
-import ModalProvider from "./context/ModalContext";
-import RecipesProvider from "./context/RecipesContext";
+
+
+
+
 
 function App() {
   return (
-    <CategoriesProvider>
-      <RecipesProvider>
-        <ModalProvider>
-          <Header />
-          <About />
-          <Popular />
-        </ModalProvider>
-      </RecipesProvider>
-    </CategoriesProvider>
+    <PopularContext>
+     
+      <Header />
+      <About />
+      <Popular />
+      <Recipes/>
+        
+ 
+
+    </PopularContext>
+
+     
+       
+   
+  
   );
 }
 
