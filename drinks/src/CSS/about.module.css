@@ -8,11 +8,17 @@
     justify-content: center;
     align-items: center;
     padding: 50px 0px 50px 0px;
-    grid-gap: 10px;
+    grid-gap: 20px;
+
+}
+
+.container h2{
+    font-size: 40px;
 
 }
 
 .container p{
+
     line-height: 2;
     width: 80%;
 }

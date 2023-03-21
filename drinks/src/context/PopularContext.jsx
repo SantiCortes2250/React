@@ -12,7 +12,7 @@ const PopularProvider = (props) => {
     useEffect(() => {
 
         const callApi = async () =>{
-            const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita`
+            const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka`
 
             const {data} = await axios.get(url)
 

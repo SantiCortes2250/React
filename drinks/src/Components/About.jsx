@@ -7,6 +7,7 @@ const About = () => {
   return (
     <div className={styles.container}>
         <h2>About Cocktails</h2>
+        <hr />
         <p>Lorem ipsum dolor sit amet 
         consectetur adipisicing elit.
         Odit cum quae, consequuntur laborum saepe
