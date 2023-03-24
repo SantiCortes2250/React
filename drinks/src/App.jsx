@@ -5,30 +5,23 @@ import Latest from "./Components/Latest";
 import Popular from "./Components/Popular";
 import Recipes from "./Components/Recipes";
 import PopularContext from "./context/PopularContext";
-
-
-
-
-
-
+import ModalProvider from "./context/ModalContext";
+import Modal from "./Components/Modal";
 
 
 function App() {
   return (
-
-      <PopularContext>
-    
-      <Header />
-      <About />
-      <Popular />
-      <Recipes/>
-      <Latest/>
-      <Footer/>
-
-  </PopularContext>
-
-    
-  
+    <PopularContext>
+      <ModalProvider>
+        <Modal/>
+        <Header />
+        <About />
+        <Popular />
+        <Recipes />
+        <Latest />
+        <Footer />
+      </ModalProvider>
+    </PopularContext>
   );
 }
 

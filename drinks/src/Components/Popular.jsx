@@ -8,9 +8,11 @@ import "slick-carousel/slick/slick.css";
 import styles from '../CSS/popular.module.css'
 
 
+
 const Popular = () => {
 
   const {drinks} = useContext(DrinksContext)
+
 
     
   return (

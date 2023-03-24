@@ -9,10 +9,12 @@ const ModalProvider = (props) => {
 
     const [drink, setDrink] = useState({})
     const [idrecipe, setIdrecipe] = useState(null)
+    const [open, setOpen] = useState(false)
 
     useEffect(() => {
 
         const callApi = async() =>{
+            if(!idrecipe) return;
             const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idrecipe}`
 
             const {data} = await axios.get(url)
@@ -29,7 +31,10 @@ const ModalProvider = (props) => {
   return (
     <ModalContext.Provider
         value={{
-            setIdrecipe
+            setIdrecipe,
+            setOpen,
+            open,
+            drink
 
         }}
     
