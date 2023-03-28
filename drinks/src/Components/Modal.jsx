@@ -12,7 +12,7 @@ const Modal = () => {
         onClick={(e) => setOpen(false)}
       ></div>
       <div className={open ? styles.ModalO : styles.ModalC}>
-      <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1679702271/Projects/icons/cerrar_vskf8q.png" alt="" className={styles.icon}/>
+      <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1679702271/Projects/icons/cerrar_vskf8q.png" alt="" className={styles.icon} onClick={(e) => setOpen(false)}/>
         <div className={styles.img}>
           <img src={drink.strDrinkThumb} alt="" className={styles.imgDrink}/>
           
