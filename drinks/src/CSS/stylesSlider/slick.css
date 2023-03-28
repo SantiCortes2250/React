@@ -188,3 +188,33 @@
     color: black;
 }
 
+@media (min-width: 600px) {
+    .slick-next
+{
+   
+    left: 93%;
+
+}
+    
+  }
+
+  @media (min-width: 900px) {
+    .slick-next
+{
+   
+    left: 95.5%;
+
+}
+    
+  }
+
+
+  @media (min-width: 1200px) {
+    .slick-next
+{
+   
+    left: 97%;
+
+}
+    
+  }

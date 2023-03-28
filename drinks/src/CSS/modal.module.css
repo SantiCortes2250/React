@@ -66,6 +66,7 @@
     width: 20px;
     right: 10px;
     top: 10px;
+    cursor: pointer;
 
 
 }
@@ -102,3 +103,22 @@
     padding-left: 5px;
 
 }
+
+
+@media (min-width: 900px) {
+    .ModalO{
+
+        width: 40%;
+        height: 80%;
+        left: 30%;
+        
+        
+    
+    
+    
+    }
+    
+   
+ 
+    
+  }

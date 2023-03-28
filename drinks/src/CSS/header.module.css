@@ -49,4 +49,41 @@
     
 }
 
+@media (min-width: 600px) {
+    .info h2{
+        font-size: 40px;
+    
+    }
+    
+    .info p{
+        font-size: 30px;
+    
+    }
+ 
+    
+  }
+
+
+  @media (min-width: 900px) {
+    .container{
+        
+        height: 600px;
+    
+    
+    }
+
+    .info h2{
+        font-size: 60px;
+    
+    }
+    
+    .info p{
+        font-size: 40px;
+    
+    }
+    
+ 
+    
+  }
+
 

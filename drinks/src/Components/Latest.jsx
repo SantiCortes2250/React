@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import { DrinksContext } from '../context/PopularContext'
-import {settings2} from '../Helpers/slider'
+import {settings3} from '../Helpers/slider'
 import Slider from "react-slick";
 import "../CSS/stylesSlider/slick.css"; 
 import "slick-carousel/slick/slick.css"; 
@@ -17,7 +17,7 @@ const Latest = () => {
     <div className={styles.container}>
       <h2>Latest Drinks</h2>
       <hr />
-       <Slider {...settings2}>
+       <Slider {...settings3}>
         {drinks.map(recipe => (
         <Drink key={recipe.idDrink} recipe={recipe}/>
         ))}

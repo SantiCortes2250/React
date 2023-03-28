@@ -1,9 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "../CSS/nav.module.css";
 
 
 const Nav = () => {
 
+  const [search, setsearch] = useState('')
+
+
+  const HandleChange = (e) =>{
+    setsearch(e.target.value)
+
+  }
+
+
+
+ const HandleSubmit = (e) =>{
+  e.preventDefault()
+
+  if(search.trim === ''){
+    return;
+  }
+
+  
+  
+
+
+  
+
+ }
   
   return (
     <div className={styles.container}>
@@ -15,11 +39,13 @@ const Nav = () => {
       </div>
 
         <form  
+        onSubmit={HandleSubmit}
         className={styles.inputForm}>
           <button className={styles.icon}>
             <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1679286464/Projects/icons/buscar_j99lxe.png" alt="" />
           </button>
           <input 
+          onChange={HandleChange}
           autoComplete="off"
           placeholder="Search..." 
           className={styles.input} 

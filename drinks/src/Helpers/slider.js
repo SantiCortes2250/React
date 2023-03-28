@@ -3,7 +3,7 @@ export const settings = {
     infinite: true,
     slidesToShow:1,
     slidesToScroll: 1,
-    speed: 700,
+    speed: 1500,
     cssEase: "linear",
     initialSlide: 0,
       responsive: [
@@ -45,8 +45,8 @@ export const settings = {
   export const settings2 = {
     dots: true,
     infinite: true,
-    slidesToShow:4,
-    slidesToScroll: 4,
+    slidesToShow:3,
+    slidesToScroll: 1,
     speed: 700,
     cssEase: "linear",
     initialSlide: 0,
@@ -54,7 +54,7 @@ export const settings = {
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
             slidesToScroll: 1,
             infinite: true,
             dots: true
@@ -63,7 +63,7 @@ export const settings = {
         {
           breakpoint: 748,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 3,
             slidesToScroll: 1,
             initialSlide: 2
           }
@@ -86,3 +86,46 @@ export const settings = {
       ]
   };
 
+  export const settings3 = {
+    dots: true,
+    infinite: true,
+    slidesToShow:3,
+    slidesToScroll: 1,
+    speed: 700,
+    cssEase: "linear",
+    initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 748,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+  };

@@ -22,3 +22,28 @@
     line-height: 2;
     width: 80%;
 }
+
+
+
+
+@media (min-width: 900px) {
+    .container h2{
+        font-size: 50px;
+    
+    }
+    
+    .container p{
+        font-size: 25px;
+    
+       
+    }
+
+    .container{
+        padding: 70px 0px 70px 0px;
+
+    }
+    
+   
+ 
+    
+  }

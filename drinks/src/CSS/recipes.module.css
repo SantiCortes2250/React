@@ -27,3 +27,35 @@
     width: 80%;
     font-size: 20px;
 }
+
+
+
+@media (min-width: 900px) {
+    .container{
+       height: 500px;
+      
+      
+    }
+
+    .info{
+        height: 600px;
+        
+        
+    
+        padding: 100px 10px 70px 100px;
+    }
+
+    .info h2{
+        font-size: 60px;
+        
+    }
+    
+    .info p{
+    
+        font-size: 30px;
+    }
+    
+   
+ 
+    
+  }
