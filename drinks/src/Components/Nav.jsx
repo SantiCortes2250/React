@@ -1,15 +1,21 @@
 import React, {useState} from "react";
 import styles from "../CSS/nav.module.css";
+import { NavLink } from 'react-router-dom';
+
+
 
 
 const Nav = () => {
 
-  const [search, setsearch] = useState('')
+  const [search, setSearch] = useState('')
+  const [searchDrink, setSearchDrink] = useState(false)
+  
+
 
 
   const HandleChange = (e) =>{
-    setsearch(e.target.value)
-
+    setSearch(e.target.value)
+    
   }
 
 
@@ -17,15 +23,13 @@ const Nav = () => {
  const HandleSubmit = (e) =>{
   e.preventDefault()
 
-  if(search.trim === ''){
+  if(search.trim() === ''){
+    setSearchDrink(false)
     return;
+
   }
 
-  
-  
-
-
-  
+  setSearchDrink(true)
 
  }
   
@@ -41,9 +45,16 @@ const Nav = () => {
         <form  
         onSubmit={HandleSubmit}
         className={styles.inputForm}>
-          <button className={styles.icon}>
+         
+          {searchDrink ? <NavLink to={'/Search/' + search}><button className={styles.icon}>
             <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1679286464/Projects/icons/buscar_j99lxe.png" alt="" />
-          </button>
+          </button></NavLink> : <button className={styles.icon}>
+            <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1679286464/Projects/icons/buscar_j99lxe.png" alt="" />
+          </button>}
+          
+
+          
+         
           <input 
           onChange={HandleChange}
           autoComplete="off"
@@ -51,6 +62,8 @@ const Nav = () => {
           className={styles.input} 
           name="name" 
           type="text" />
+     
+       
       </form>
       </div>
  

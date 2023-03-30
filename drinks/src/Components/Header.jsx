@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import images from '../Helpers/ImagesBanner'
 import styles from '../CSS/header.module.css'
 import {settings} from '../Helpers/slider'
@@ -10,7 +10,10 @@ import Button from './Button';
 
 
 
+
 const Header = () => {
+
+
   return (
     <>
       <Nav/>

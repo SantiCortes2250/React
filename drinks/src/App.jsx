@@ -1,27 +1,23 @@
-import About from "./Components/About";
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
-import Latest from "./Components/Latest";
-import Popular from "./Components/Popular";
-import Recipes from "./Components/Recipes";
-import PopularContext from "./context/PopularContext";
-import ModalProvider from "./context/ModalContext";
-import Modal from "./Components/Modal";
+
+import Search from "./Pages/Search"
+import{
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom'
+import Home from "./Pages/Home";
+
 
 
 function App() {
   return (
-    <PopularContext>
-      <ModalProvider>
-        <Modal/>
-        <Header />
-        <About />
-        <Popular />
-        <Recipes />
-        <Latest />
-        <Footer />
-      </ModalProvider>
-    </PopularContext>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/Search/:name" element={<Search/>}/>
+    </Routes>
+    </BrowserRouter>
+    
   );
 }
 
