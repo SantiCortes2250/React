@@ -15,26 +15,25 @@ const Nav = () => {
 
   const HandleChange = (e) =>{
     setSearch(e.target.value)
-    
+
+    if(search.trim() === ''){
+      setSearchDrink(false)
+      return;
+  
+    }
+    setSearchDrink(true)
+
   }
 
 
 
  const HandleSubmit = (e) =>{
   e.preventDefault()
-
-  if(search.trim() === ''){
-    setSearchDrink(false)
-    return;
-
-  }
-
-  setSearchDrink(true)
-
  }
   
   return (
     <div className={styles.container}>
+      <NavLink to={'/'}>
       <div className={styles.logo}>
         <img
           src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1679286372/Projects/Logos/stailr_axgsr7.png"
@@ -42,6 +41,9 @@ const Nav = () => {
         />
       </div>
 
+
+      </NavLink>
+     
         <form  
         onSubmit={HandleSubmit}
         className={styles.inputForm}>
