@@ -1,0 +1,47 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.background{
+    background-image: url('https://res.cloudinary.com/dhbi86hxn/image/upload/v1680320035/Projects/Banners/background_mwfwve.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+}
+
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.356);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    grid-gap: 10px;
+
+}
+
+
+.images{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.title{
+    letter-spacing: 7px;
+    font-weight: bold;
+    font-size: 30px;
+}
+

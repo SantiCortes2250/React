@@ -2,6 +2,7 @@ import axios from "axios"
 import React, {useState, useEffect} from "react"
 import Form from "./Components/Form"
 import ListImages from "./Components/ListImages"
+import styles from "./CSS/container.module.css"
 
 function App() {
 
@@ -57,13 +58,18 @@ function App() {
  
 
   return (
-    <div className="container">
-      <div className="jumbotron">
-        <p className="lead text-center">Search Images</p>
-        <Form
-        word={setword}/>
+    <div className={styles.container}>
+      <div className={styles.background}>
+        <div className={styles.overlay}>
+          <h2>Find the best images to view and download</h2>
+          <p>Many images for you see and download</p>
+          <Form
+          word={setword}/>
+        </div>
       </div>
-      <div className="row justify-content-center">
+   
+      <div className={styles.images}>
+      <p className={styles.title}>{word}</p>
         <ListImages 
           key={images.id}
           images={images}
@@ -72,10 +78,10 @@ function App() {
         {(paginator === 1) ? null : 
         (<button
         type="button"
-        className="btn btn-info m  w-25 m-1"
+        className=""
         onClick={PaginateFormer}
         >
-          &laquo; Former 
+          &laquo; back 
         </button>)}
 
 
@@ -83,10 +89,10 @@ function App() {
         (
           <button
           type="button"
-          className="btn btn-info w-25 m-1"
+          className=""
           onClick={PaginateFollowing}
           >
-            Following &raquo;
+            next &raquo;
           </button>
         )}
       </div>

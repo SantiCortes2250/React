@@ -1,30 +1,32 @@
 import React from 'react'
+import styles from '../CSS/images.module.css'
 
 const Images = ({image}) => {
 
   const { largeImageURL, likes, previewURL, tags, views } = image;
 
   return (
-    <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-        <div className="card">
-            <img src={previewURL} alt={tags} className='card-img-top' />
-
-
-            <div className="card-body">
-                <p className="card-text">{likes} Likes</p>
-                <p className="card-text">{views} Views</p>
-            </div>
-
-            <div className="card-footer">
+  
+        <div className={styles.card}>
+             <div className={styles.btn}>
                 <a 
                 href={largeImageURL}
                 target='_blank'
                 rel='nopener noreferrer'
-                className='btn btn-danger btn-block'
-                >View Image</a>
+                className=''
+                ><img src='https://res.cloudinary.com/dhbi86hxn/image/upload/v1680324032/Projects/icons/ver_xmlf2c.png'></img></a>
             </div>
+            <img src={previewURL} alt={tags} className='' />
+
+
+            <div className={styles.info}>
+                <p>{likes} Likes</p>
+                <p>{views} Views</p>
+            </div>
+
+           
         </div>
-    </div>
+
   )
 }
 

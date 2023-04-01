@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Error from './Error'
+import styles from '../CSS/form.module.css'
 
 const Form = ({word}) => {
 
@@ -29,25 +30,21 @@ const Form = ({word}) => {
   return (
     <form
     onSubmit={HandleSubmit}>
-        <div className="row">
-        <div className="form-group col-md-6">
+        
+      
+        <div className={styles.search}>
             <input 
             type="text"
             onChange={e => setsearch(e.target.value)}
-            className='form-control form-control-lg'
+            className={styles.search__input}
             placeholder='Search Images, Ex: Food'
              />
-        </div>
-        <div className="form-group col-md-4">
-            <input 
-            type="submit"
-            className='btn btn-lg btn-danger btn-block'
-            value='Search'
-             />
-        </div>
+             <button
+             className={styles.search__button}>
+            
 
+             </button>
         </div>
-
         { error ? <Error message='Enter a value'/> : null}
         
     </form>
