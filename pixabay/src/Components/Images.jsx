@@ -14,9 +14,9 @@ const Images = ({image}) => {
                 target='_blank'
                 rel='nopener noreferrer'
                 className=''
-                ><img src='https://res.cloudinary.com/dhbi86hxn/image/upload/v1680324032/Projects/icons/ver_xmlf2c.png'></img></a>
+                ><img src='https://res.cloudinary.com/dhbi86hxn/image/upload/v1680324032/Projects/icons/ver_xmlf2c.png' className={styles.image}></img></a>
             </div>
-            <img src={previewURL} alt={tags} className='' />
+            <img src={previewURL} alt={tags} className={styles.img} />
 
 
             <div className={styles.info}>
