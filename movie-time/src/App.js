@@ -9,7 +9,8 @@ import{
 
 import { Home } from './components/Pages/Home';
 import { Movies } from './components/Pages/Movies';
-import Movie from './components/Layouts/Movie';
+import Movie from './components/Pages/Movie';
+
 
 
 

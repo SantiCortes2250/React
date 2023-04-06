@@ -84,6 +84,9 @@ export const MainHome = () => {
       setTrailer(trailer ? trailer : data.videos.results[0]);
     }
 
+
+
+
    
 
     setPlaying(true)
@@ -123,7 +126,10 @@ export const MainHome = () => {
           ))}
         </Slider>
         <Title title='Latest'/>
-        <SliderMovies />
+        <SliderMovies
+        onSendData={handleChildData}
+
+        />
         <Title title='Upcoming'/>
         <UpcomingMovies/>
         <Title title='Trending'/>

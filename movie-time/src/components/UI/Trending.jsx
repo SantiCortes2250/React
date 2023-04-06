@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getMovies } from "../../api";
 import { Imagenes } from "./Imagenes";
-import Slider from "react-slick";
-import "../../stylesSlider/slick.css";
-import "slick-carousel/slick/slick.css";
 import { NavLink } from 'react-router-dom';
 
 const Trending = () => {

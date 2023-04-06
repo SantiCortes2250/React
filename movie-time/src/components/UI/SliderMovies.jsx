@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import {AiFillPlayCircle} from 'react-icons/ai'
 
 
-export const SliderMovies = () => {
+export const SliderMovies = ({onSendData}) => {
 
     const settings2 = {
         dots: true,
@@ -83,7 +83,9 @@ export const SliderMovies = () => {
                     </div>
                     <div className="info_movie_card">
                         <div className="btn_wacth">
-                          <AiFillPlayCircle className='icon_btn_watch'/>
+                          <AiFillPlayCircle className='icon_btn_watch'  onClick={() => {
+                          onSendData(item.id);
+                        }}/>
                         </div>
                         <div className="info">
                           <h4>{item.title}</h4>

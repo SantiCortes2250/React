@@ -3,7 +3,6 @@ import { useParams } from 'react-router';
 import { getMovie, getVideoMovie } from '../../api';
 import { Cards_movie } from '../UI/Cards_movie';
 import { VideoMovie } from '../UI/VideoMovie';
-import YouTube from 'react-youtube'
 
 
 export const MainMovies = () => {
@@ -40,8 +39,13 @@ export const MainMovies = () => {
       const trailer = data.videos.results.find(
         (vid) => vid.name === "Official Trailer"
       );
-      setTrailer(trailer ? trailer : data.videos.results[0]);
+      setTrailer(trailer ? trailer : '');
     }
+
+    
+
+
+
 
    
 

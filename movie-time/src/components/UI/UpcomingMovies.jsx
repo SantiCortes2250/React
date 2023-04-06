@@ -4,6 +4,7 @@ import { Imagenes } from "./Imagenes";
 import Slider from "react-slick";
 import "../../stylesSlider/slick.css";
 import "slick-carousel/slick/slick.css";
+import { NavLink } from "react-router-dom";
 
 
 const UpcomingMovies = () => {
@@ -78,7 +79,10 @@ const UpcomingMovies = () => {
                 <div className="p_upcoming">
                   <p>{item.overview}</p>
                 </div>
+                <NavLink to={"/Movie/" + item.title}>
                 <button className="btn_upcoming">More Info</button>
+                </NavLink>
+               
               </div>
             </div>
           ))}
