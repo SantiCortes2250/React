@@ -6,8 +6,46 @@ const IMAGE_PATH = 'https://image.tmdb.org/t/p/original';
 
 //get movies
 
-export const getMovies = async () =>{
-    const res = await axios.get(`${API}/discover/movie`,{
+export const getTop = async () =>{
+    const res = await axios.get(`${API}/movie/top_rated`,{
+        params:{
+            api_key: API_KEY
+        },
+    })
+
+    return res;
+
+
+}
+
+export const getPop = async () =>{
+    const res = await axios.get(`${API}/movie/popular`,{
+        params:{
+            api_key: API_KEY
+        },
+    })
+
+    return res;
+
+
+}
+
+export const getUp = async () =>{
+    const res = await axios.get(`${API}/movie/upcoming`,{
+        params:{
+            api_key: API_KEY
+        },
+    })
+
+    return res;
+
+
+}
+
+
+
+export const getTrending = async (type, name) =>{
+    const res = await axios.get(`${API}/${type}/${name}`,{
         params:{
             api_key: API_KEY
         },
@@ -20,8 +58,8 @@ export const getMovies = async () =>{
 
 //get movies for the name
 
-export const getMovie = async (name) =>{
-    const res = await axios.get(`${API}/search/movie`,{
+export const getMovie = async (tipo , name) =>{
+    const res = await axios.get(`${API}/search/${tipo}`,{
         params:{
             api_key:API_KEY,
             query: name
@@ -32,6 +70,8 @@ export const getMovie = async (name) =>{
     return res;
     
 }
+
+
 
 //get video movie
 

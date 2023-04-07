@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { getMovies } from '../../api'
+import { getTop } from '../../api'
 import { Imagenes } from './Imagenes'
 import Slider from "react-slick";
 import "../../stylesSlider/slick.css"; 
@@ -30,15 +30,15 @@ export const SliderMovies = ({onSendData}) => {
             {
               breakpoint: 748,
               settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
+                slidesToShow: 2,
+                slidesToScroll: 2,
                 initialSlide: 2
               }
             },
             {
               breakpoint: 600,
               settings: {
-                slidesToShow: 1,
+                slidesToShow: 2,
                 slidesToScroll: 1,
                 initialSlide: 2
               }
@@ -59,7 +59,7 @@ export const SliderMovies = ({onSendData}) => {
     const [movies, setMovies] = useState([])
 
     const loadMovies = async () =>{
-        const {data} = await getMovies()
+        const {data} = await getTop()
         setMovies(data.results) 
     }
 

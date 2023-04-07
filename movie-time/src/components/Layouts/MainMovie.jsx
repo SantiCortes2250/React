@@ -10,8 +10,9 @@ const MainMovie = () => {
 
   const URL_IMAGE = "https://image.tmdb.org/t/p/original";
 
-    const {name} = useParams()
+    const {tipo , name} = useParams()
     const [movie, setmovie] = useState({})
+    console.log(movie)
     const [trailer, setTrailer] = useState(null)
     const [playing, setPlaying] = useState(false)
 
@@ -46,7 +47,7 @@ const MainMovie = () => {
  
    useEffect(() => {
     const getData = async() =>{
-        const {data} = await getMovie(name)
+        const {data} = await getMovie(tipo, name)
         setmovie(data.results[0])
     }
     getData()
@@ -68,32 +69,37 @@ const MainMovie = () => {
       )
       }
      <div className='container_movie'>
-        <div className="img_movie">
-        <Imagenes url={`${URL_IMAGE + movie.poster_path}`} />
+      <div className="img_bakground_movie">
+      <Imagenes  url={`${URL_IMAGE + movie.backdrop_path}`}/>
 
-        </div>
-        <div className="info_movies">
-            
-         <h2>{movie.title}</h2>
-         <h4>Language:<p>{movie.original_language}</p></h4>
-         <h4>Average:<p>{movie.vote_average}</p></h4>
-         <h4>Date:<p>{movie.release_date}</p></h4>
-         <p>{movie.overview}</p>
-
-        </div>
-        <button
+      </div>
+  
+     <div className="movie_info_container">
+          <div className="img_movie">
+            <Imagenes url={`${URL_IMAGE + movie.poster_path}`} />
+          </div>
+          <div className="info_movies">
+            <h2>{movie.title}</h2>
+            <h4>Language:<p>{movie.original_language}</p></h4>
+            <h4>Average:<p>{movie.vote_average}</p></h4>
+            <h4>Date:<p>{movie.release_date}</p></h4>
+            <p>{movie.overview}</p>
+            {tipo === 'movie' ? 
+            <button
             className="btn_watch_movie"
             onClick={() => {
               handleChildData(movie.id);
             }}
-          >
+            >
             <AiFillPlayCircle className="icon_watch" />
             <span>Watch Trailer</span>
-        </button>
-        
-
-
-    </div>
+            </button>: null
+            }
+          </div>
+      </div>
+      
+     </div>
+       
     </>
 
    

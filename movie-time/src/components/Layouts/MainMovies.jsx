@@ -18,7 +18,7 @@ export const MainMovies = () => {
 
   const searchMovie = async () => {
     try {
-      const { data } = await getMovie(name)
+      const { data } = await getMovie('movie' , name)
       setMovies(data.results)
 
       if (data.results.length) {

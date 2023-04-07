@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getMovies, getVideoMovie } from '../../api'
+import { getUp, getVideoMovie } from '../../api'
 import { BannerSlider } from '../UI/BannerSlider'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -70,7 +70,7 @@ export const MainHome = () => {
   const [playing, setPlaying] = useState(false)
 
   const loadMovies = async () => {
-    const { data } = await getMovies()
+    const { data } = await getUp()
     setMovies(data.results)
   }
 

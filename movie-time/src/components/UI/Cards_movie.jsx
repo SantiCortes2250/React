@@ -7,7 +7,7 @@ export const Cards_movie = ({ item, onSendData }) => {
   const URL_IMAGE = "https://image.tmdb.org/t/p/original";
 
   return (
-    <div className="cards_movies">
+    <div className="cards_movies2">
       <div className="container_img_movie">
         <Imagenes url={`${URL_IMAGE + item.poster_path}`} />
       </div>

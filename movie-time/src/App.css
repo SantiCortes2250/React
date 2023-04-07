@@ -65,7 +65,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  grid-gap: 20px;
+  grid-gap: 10px;
   margin-right: 40px;
   display: none;
   
@@ -101,7 +101,7 @@
 .container_banner_movie{
   
   width: 100%;
-  height: 500px;
+  height: 550px;
 
 
   
@@ -169,6 +169,7 @@
   color: white;
   border: none;
   cursor: pointer;
+  height: 40px;
 
 }
 
@@ -258,6 +259,18 @@
   
 }
 
+.cards_movies2{
+  width: 250px;
+  height: 400px;
+  background-color: rgb(25,26,29);
+  cursor: pointer;
+
+  overflow: hidden;
+
+  
+  
+}
+
 .container_img_movie{
   width: 100%;
   height: 100%;
@@ -300,6 +313,23 @@
 
 }
 
+.cards_movies2:hover .info_movie_card{
+  background-color: rgba(0, 0, 0, 0.637);
+  height: 500px;
+  position: relative;
+  color: white;
+  transition: all 2s;
+
+}
+
+.cards_movies2:hover .info_movie_card2{
+  background-color: rgba(0, 0, 0, 0.637);
+  height: 400px;
+  position: relative;
+  color: white;
+
+
+}
 .cards_movies:hover .info_movie_card2{
   background-color: rgba(0, 0, 0, 0.637);
   height: 400px;
@@ -351,7 +381,32 @@
   margin-top: 100px;
 }
 
+.cards_movies2:hover .btn_wacth{
+
+  color: rgb(191,27,44);
+  font-size: 70px;
+  transition: all 2s;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
 .cards_movies:hover .btn_wacth2{
+
+  color: rgb(191,27,44);
+  font-size: 70px;
+  transition: all 2s;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+
+.cards_movies2:hover .btn_wacth2{
 
   color: rgb(191,27,44);
   font-size: 70px;
@@ -643,17 +698,42 @@ overflow: hidden;
 /*--------------------Info Movie-----------------------------*/
 
 .container_movie{
-  background-color: rgb(25,26,29);
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  background-color: rgb(36, 36, 36);
+
+  
 
 
 }
 
-.img_movie{
+.movie_info_container{
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.container_movie img{
+  display: none;
+
+}
+
+.movie_info_container{
+ 
+  display: flex;
+  align-items: center;
   width: 100%;
+
+
+  background-color: rgba(0, 0, 0, 0.658);
+}
+
+.img_movie{
+
+  height: 500px;
+  margin-left: 20px;
   display: flex;
   justify-content: center;
 }
@@ -661,6 +741,7 @@ overflow: hidden;
 
   width: 300px;
   border: white 1px solid;
+  display: block;
 
   
 
@@ -693,18 +774,144 @@ overflow: hidden;
   grid-gap: 10px;
   font-size: 17px;
   color: rgb(131, 131, 131);
+  
 }
 
 .info_movies p{
   margin-top: 10px;
   width: 90%;
   font-size: 20px;
+  margin-bottom: 10px;
+ 
 }
 
-.container_movie button {
-  margin-left: 25px;
+
+
+/*-----------------MediaQueries-------------------------------*/
+
+@media (min-width: 600px){
+  .container_info_movie {
+  
+    width: 500px;
+   
 }
 
+.nav_bar_movie form{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.nav_bar_movie input {
+    width: 250px;
+   
+}
+
+.social_movie{
+  
+  margin-right: 10px;
+  display: flex;
+  
+ 
+
+}
+
+.btns_trendi {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+}
+
+
+@media (min-width: 900px){
+
+  .container_banner_movie{
+  
+
+    height: 600px;
+  
+  
+    
+    
+  }
+  .container_info_movie {
+  
+    width: 800px;
+    padding: 100px 0px 0px 90px;
+   
+  
+    
+   
+}
+
+
+.description_movie p{
+  
+  font-size: 22px;
+
+
+  height: 250px;
+
+ 
+
+
+
+}
+
+.container_info_movie h1{
+  
+    font-size: 50px;
+  
+   
+  
+}
+
+.reproductor{
+
+  height: 500px;
+}
+
+}
+
+
+@media (min-width: 1200px){
+
+  .movie_info_container{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    height: 700px;
+    
+  }
+
+  .img_movie img{
+
+
+    border: white 1px solid;
+    display: block;
+  
+    
+  
+  }
+  
+  .img_bakground_movie img{
+    display: block;
+    height: 100%;
+    width: 100%;
+  
+  
+  }
+
+
+
+
+
+
+
+}
 
 
 

@@ -13,8 +13,7 @@
     left: 87%;
     top: 50%;
     display: block;
-    width: 60px;
-    height: 60px;
+   
     border-radius: 50%;
     cursor: pointer;
     color: transparent;
@@ -189,4 +188,23 @@
     opacity: .75;
     color: black;
 }
+ @media (min-width: 600px) {
+    .slick-next
+{
+  
+    left: 90%;
+}
 
+    
+} 
+
+
+@media (min-width: 900px) {
+    .slick-next
+{
+  
+    left: 95%;
+}
+
+    
+} 
