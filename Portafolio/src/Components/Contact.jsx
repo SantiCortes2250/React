@@ -1,9 +1,58 @@
-import React from 'react'
+import React, {useRef , useState} from 'react'
 import info from '../../info.json'
 import style from '../CSS/contact.module.css'
+import emailjs from '@emailjs/browser'
+import Message from './Message'
+
+
 
 const Contact = () => {
+
+
+  const refForm = useRef();
+
+  const [message, setMessage] = useState('')
+
+  
+  
+
+  const HandleSubmit = (e) =>{
+    e.preventDefault()
+
+    const serviceId = 'service_x5hc3mk'
+    const templateId = 'template_8srgsan'
+
+    const apiKey = 'I-hO-GkNbCMFjZVga'
+
+
+    emailjs.sendForm(serviceId, templateId, refForm.current , apiKey)
+    .then((res) => {
+      if(res.text === 'OK'){
+        setMessage('enviado')
+        document.getElementById('name').value = ''
+        document.getElementById('email').value = ''
+        document.getElementById('subject').value = ''
+        document.getElementById('message').value = ''
+
+      }
+
+     
+    })
+  
+    .catch(error => console.error(error))
+
+
+
+
+  }
+
+
   return (
+    <>
+    <Message
+    message={message}
+    />
+
     <div className={style.container}>
       <h2 className={style.section}>
         Get in Touch
@@ -13,15 +62,19 @@ const Contact = () => {
       <div className={style.forms}>
       <div className={style.form}>
         <h2>Message Me</h2>
-        <form>
+        <form
+          ref={refForm}
+          onSubmit={HandleSubmit}
+
+        >
           <div className={style.email}>
-          <input type="text" placeholder='Name' required />
-          <input type="email" placeholder='Email' required />
+          <input type="text" placeholder='Name' name="name" required id='name'/>
+          <input type="email" placeholder='Email' name="email" required id='email' />
 
           </div>
        
-        <input type="text" placeholder='Subject' required/>
-        <textarea name="" id="" cols="30" rows="10" placeholder='Message' required/>
+        <input type="text" placeholder='Subject' name="subject" id='subject' required/>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder='Message' required/>
         <button>Send Message</button>
         </form>
       </div>
@@ -55,6 +108,8 @@ const Contact = () => {
       </div>
      
     </div>
+    </>
+    
   )
 }
 
