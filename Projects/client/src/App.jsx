@@ -5,11 +5,14 @@ import NewAccount from './components/auth/NewAccount'
 import Dashboard from './components/Pages/Dashboard'
 import Profile from './components/Pages/Profile'
 import Projects from './components/Pages/Projects'
+import ProyectoState from './context/proyectos/ProyectoState'
+
 
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <ProyectoState>
+      <BrowserRouter>
       <Routes>
         <Route exact path='/' element={<Login/>}/>
         <Route exact path='/new-account' element={<NewAccount/>}/>
@@ -18,6 +21,9 @@ const App = () => {
         <Route exact path='/profile' element={<Profile/>}/>
       </Routes>
     </BrowserRouter>
+
+    </ProyectoState>
+    
   )
 }
 

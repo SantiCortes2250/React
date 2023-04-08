@@ -1,15 +1,30 @@
-import React, {useState} from 'react'
+import React, {useContext, useState, useEffect} from 'react'
 import Card from '../layout/Card'
 import Nav from '../layout/Nav'
 import styles from '../../CSS/dashboard.module.css'
 import Sidebar from '../layout/Sidebar'
 import CardLogout from '../layout/CardLogout'
+import proyectoContext from '../../context/proyectos/ProyectoContext'
+
+
 
 
 const Dashboard = () => {
 
+  const proyectosContext = useContext(proyectoContext)
+
+  const { proyectos, obtenerProyectos } = proyectosContext;
+
   const [bar, setBar] = useState(false)
   const [open, setOpen] = useState(1)
+
+  useEffect(() => {
+    obtenerProyectos()
+    
+  }, [])
+  
+
+
 
 
   return (
@@ -28,9 +43,12 @@ const Dashboard = () => {
      
       <div className={styles.container}>
       <h2 className={styles.title}>Dashboard</h2>
-        <Card/>
-        <Card/>
-        <Card/>
+        {proyectos.map(proyecto =>
+          <Card
+          key={proyecto.id}
+          proyecto={proyecto}
+          />
+        )}
       </div>
 
     </>

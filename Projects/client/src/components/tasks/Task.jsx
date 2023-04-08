@@ -12,6 +12,7 @@ const Task = ({task}) => {
       </label>
       <p>{name}</p>
       <div className={styles.edit}>
+    
         <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1679115730/Projects/icons/lapiz_aekcnf.png" alt="" />
 
 

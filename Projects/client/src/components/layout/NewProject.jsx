@@ -1,12 +1,21 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import styles from '../../CSS/newproject.module.css'
+import proyectoContext from '../../context/proyectos/ProyectoContext'
+
 
 
 const NewProject = ({more}) => {
 
+  //Obtener el state del formulario 
+
+  const proyectosContext = useContext(proyectoContext);
+
+  const { agregarProyecto } = proyectosContext;
+
+  
+
 
   const [proyecto, setProyecto] = useState({
-    id: '',
     name:''
   })
 
@@ -24,6 +33,14 @@ const NewProject = ({more}) => {
 
   const HandleSubmit = (e) =>{
       e.preventDefault()
+
+      if(name.trim() === ''){
+        return;
+      }
+
+      agregarProyecto(proyecto)
+
+      
 
       
   }
