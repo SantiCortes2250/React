@@ -1,7 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import styles from "../../CSS/nav.module.css"
+import proyectoContext from '../../context/proyectos/ProyectoContext'
 
 const Nav = ({open, setOpen, setBar}) => {
+
+  const proyectosContext = useContext(proyectoContext)
+
+  const {proyectos} = proyectosContext;
 
   
 
@@ -15,13 +20,13 @@ const Nav = ({open, setOpen, setBar}) => {
             
         </div>
         <div className={styles.projects}>
-          <div className={styles.count}>0</div>
+          <div className={styles.count}>{proyectos.length}</div>
           <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678746830/Projects/icons/bulb_xmgdg2.png" alt="" />
           
 
         </div>
         <div className={styles.profile}
-          onClick={e =>setOpen(open + 1)}>
+          onClick={() =>setOpen(open + 1)}>
           <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678747316/Projects/icons/usuario_pkvbnb.png" alt="" />
            
 

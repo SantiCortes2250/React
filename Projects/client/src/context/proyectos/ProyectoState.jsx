@@ -4,26 +4,31 @@ import proyectoReducer from './ProyectoReducer'
 import { v4 as uuidv4 } from 'uuid';
 
 import { 
+    MOSTRAR_FORMULARIO,
     OBTENER_PROYECTOS,
-    AGREGAR_PROYECTOS
+    AGREGAR_PROYECTOS,
+    OBTENER_PROYECTO,
+    ELIMINAR_PROYECTO
  } from '../../types'
 
 
 
 const ProyectoState = props =>{
 
+    
     const proyectos  = [
         {id: 1, name: 'Tienda Virtual'},
         {id: 2, name: 'Tienda Online'},
         {id: 3, name: 'Ecommerce'},
         {id: 4, name: 'Movies'}
     ]
-
-  
     
 
     const initialState = {
-        proyectos : []
+        proyectos  : [],
+        formulario : false,
+        proyecto : null
+        
        
         
     }
@@ -34,6 +39,12 @@ const ProyectoState = props =>{
 
 
     //Serie de funciones para el CRUD
+
+    const mostrarFormulario =  () =>{
+        dispatch({
+            type: MOSTRAR_FORMULARIO
+        })
+    }
 
     const obtenerProyectos = () =>{
         dispatch({
@@ -58,12 +69,34 @@ const ProyectoState = props =>{
     }
 
 
+    const obtenerProyecto = idProyecto =>{
+        dispatch({
+            type: OBTENER_PROYECTO,
+            payload: idProyecto
+        })
+
+    }
+
+
+    const eliminarProyecto = idProyecto =>{
+        dispatch({
+            type: ELIMINAR_PROYECTO,
+            payload: idProyecto
+        })
+    }
+
+
     return (
         <proyectoContext.Provider    
         value={{
+            formulario: state.formulario,
             proyectos: state.proyectos,
+            proyecto: state.proyecto,
+            mostrarFormulario,
             obtenerProyectos,
-            agregarProyecto
+            agregarProyecto,
+            obtenerProyecto,
+            eliminarProyecto
            
         }}
         

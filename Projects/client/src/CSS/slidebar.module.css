@@ -90,6 +90,9 @@
     width: 25px;
 }
 
+.enlaces span{
+    color: rgb(156, 156, 156);
+}
 
 .img{
     margin-left: 35px;

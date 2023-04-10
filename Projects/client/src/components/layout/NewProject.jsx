@@ -4,7 +4,7 @@ import proyectoContext from '../../context/proyectos/ProyectoContext'
 
 
 
-const NewProject = ({more}) => {
+const NewProject = () => {
 
   //Obtener el state del formulario 
 
@@ -40,15 +40,21 @@ const NewProject = ({more}) => {
 
       agregarProyecto(proyecto)
 
+      setProyecto({
+        name: ''
+      })
+
       
 
       
   }
   return (
-    <div className={more % 2 == 0 ? styles.on : styles.off}>
+    <div className={styles.on}>
         <form
-        onSubmit={HandleSubmit}>
+        onSubmit={HandleSubmit}
+        >
             <input 
+            required
             type="text"
             className='name-project' 
             placeholder='Name Project'

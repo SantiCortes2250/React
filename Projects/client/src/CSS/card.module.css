@@ -1,6 +1,9 @@
+.nav{
+    text-decoration: none;
+}
 .card{
     display: flex;
-    width: 85%;
+    width: 300px;
     background-color: #2B3035;
     height: 120px;
     border-radius: 10px;
@@ -26,14 +29,19 @@
     color: #15CA20;
 }
 
+.action{
+    height: 100%;
+    
+}
 
 .action button{
-    width: 40px;
-    background-color: transparent;
+    width: 60px;
+    height: 30px;
+    background-color: red;
+    color: white;
     border: none;
-    margin-right: 5px;
+    cursor: pointer;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
-.action button img{
-    width: 100%;
-}

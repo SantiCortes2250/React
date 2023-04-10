@@ -11,7 +11,7 @@ import ProyectoState from './context/proyectos/ProyectoState'
 
 const App = () => {
   return (
-    <ProyectoState>
+    <ProyectoState> 
       <BrowserRouter>
       <Routes>
         <Route exact path='/' element={<Login/>}/>

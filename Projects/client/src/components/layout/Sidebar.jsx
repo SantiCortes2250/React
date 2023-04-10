@@ -10,16 +10,19 @@ import proyectoContext from '../../context/proyectos/ProyectoContext'
 const Sidebar = ({setBar, bar}) => {
 
   const proyectosContext = useContext(proyectoContext)
-  const { proyectos, obtenerProyectos } = proyectosContext;
+  const { formulario,  mostrarFormulario, proyectos, obtenerProyectos, obtenerProyecto  } = proyectosContext;
+
 
   const [more, setMore] = useState(1)
-  const [project, setproject] = useState(1)
+ 
 
   useEffect(() => {
     obtenerProyectos()
     
   }, [])
   
+  
+
 
 
 
@@ -35,16 +38,18 @@ const Sidebar = ({setBar, bar}) => {
           <NavLink to={'/Dashboard'}><p><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678933181/Projects/icons/home_na0ym5.png" alt="" />Dashboard</p></NavLink>
             <p onClick={e =>setMore(more + 1)}><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678933263/Projects/icons/categories_qwkaah.png" alt="" />Projects <img className={more % 2 == 0 ? styles.more : styles.more1} src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678934611/Projects/icons/expand_lek08a.png" alt="" /></p>
             <div className={more % 2 == 0 ? styles.projects2 : styles.projects}>
-              {proyectos.map(proyecto => 
-                <NavLink to={'/Projects'}><a><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678935396/Projects/icons/flecha_c65oeq.png" alt="" /> {proyecto.name}</a> </NavLink>
-              )}
+              {proyectos.length === 0 ?  <span>No projects</span> :
+                  proyectos.map(proyecto => 
+                    <NavLink to={'/projects'} key={proyecto.id} onClick={() => obtenerProyecto(proyecto.id)}><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678935396/Projects/icons/flecha_c65oeq.png" alt="" /> {proyecto.name}</NavLink>
+              ) }
+             
+          
             
             </div>
-            <p onClick={e =>setproject(project + 1)}><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678936012/Projects/icons/idea_dwe47j.png" alt="" /> New Project<img className={styles.img} src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678933852/Projects/icons/plus_jeqisn.png" alt="" /></p>
-            <NewProject
-      
-            more={project}
-            />
+         
+            <p onClick={() =>mostrarFormulario()}><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678936012/Projects/icons/idea_dwe47j.png" alt="" /> New Project<img className={styles.img} src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678933852/Projects/icons/plus_jeqisn.png" alt="" /></p>
+            {formulario ?   <NewProject /> : null }
+           
 
         </div>
            

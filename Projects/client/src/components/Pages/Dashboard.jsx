@@ -22,6 +22,8 @@ const Dashboard = () => {
     obtenerProyectos()
     
   }, [])
+
+
   
 
 
@@ -43,12 +45,25 @@ const Dashboard = () => {
      
       <div className={styles.container}>
       <h2 className={styles.title}>Dashboard</h2>
-        {proyectos.map(proyecto =>
-          <Card
-          key={proyecto.id}
-          proyecto={proyecto}
-          />
-        )}
+
+      <div className={styles.cards}>
+      {proyectos.length === 0 ?  <h4>No Projects</h4> : (
+          proyectos.map(proyecto =>
+            <Card
+            key={proyecto.id}
+            proyecto={proyecto}
+            />
+          )
+
+      )
+     
+
+      }
+     
+     
+
+      </div>
+        
       </div>
 
     </>
