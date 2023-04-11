@@ -3,6 +3,8 @@ import NewProject from './NewProject'
 import styles from '../../CSS/slidebar.module.css'
 import { NavLink } from 'react-router-dom'
 import proyectoContext from '../../context/proyectos/ProyectoContext'
+import TareaContext from '../../context/tareas/tareaContext'
+
 
 
 
@@ -10,8 +12,9 @@ import proyectoContext from '../../context/proyectos/ProyectoContext'
 const Sidebar = ({setBar, bar}) => {
 
   const proyectosContext = useContext(proyectoContext)
+  const tareasContext = useContext(TareaContext)
   const { formulario,  mostrarFormulario, proyectos, obtenerProyectos, obtenerProyecto  } = proyectosContext;
-
+  const {   mostrarTareas  } = tareasContext;
 
   const [more, setMore] = useState(1)
  
@@ -20,6 +23,14 @@ const Sidebar = ({setBar, bar}) => {
     obtenerProyectos()
     
   }, [])
+
+
+  const HandleClick = id =>{
+
+    obtenerProyecto(id)
+    mostrarTareas(id)
+
+  }
   
   
 
@@ -40,7 +51,7 @@ const Sidebar = ({setBar, bar}) => {
             <div className={more % 2 == 0 ? styles.projects2 : styles.projects}>
               {proyectos.length === 0 ?  <span>No projects</span> :
                   proyectos.map(proyecto => 
-                    <NavLink to={'/projects'} key={proyecto.id} onClick={() => obtenerProyecto(proyecto.id)}><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678935396/Projects/icons/flecha_c65oeq.png" alt="" /> {proyecto.name}</NavLink>
+                    <NavLink to={'/projects'} key={proyecto.id} onClick={() => HandleClick(proyecto.id)}><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678935396/Projects/icons/flecha_c65oeq.png" alt="" /> {proyecto.name}</NavLink>
               ) }
              
           

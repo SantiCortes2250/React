@@ -9,11 +9,15 @@ import proyectoContext from '../../context/proyectos/ProyectoContext'
 
 
 
+
+
 const Dashboard = () => {
 
   const proyectosContext = useContext(proyectoContext)
 
+
   const { proyectos, obtenerProyectos } = proyectosContext;
+
 
   const [bar, setBar] = useState(false)
   const [open, setOpen] = useState(1)

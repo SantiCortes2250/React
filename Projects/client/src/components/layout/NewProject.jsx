@@ -10,7 +10,7 @@ const NewProject = () => {
 
   const proyectosContext = useContext(proyectoContext);
 
-  const { agregarProyecto } = proyectosContext;
+  const { agregarProyecto} = proyectosContext;
 
   
 
