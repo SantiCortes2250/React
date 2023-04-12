@@ -25,7 +25,8 @@ const AboutMe = () => {
                   <p>Phone:<span>{info.Phone}</span></p>
                   <p>Email:<span>{info.Email}</span></p>
               </div>
-              <button>Download CV</button>
+                <a href='./cv.pdf' download> <button>Download CV</button></a>
+           
           </div>
       </div>
     

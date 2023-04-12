@@ -76,13 +76,13 @@ const Contact = () => {
 
         >
           <div className={style.email}>
-          <input type="text" placeholder='Name' name="name" required id='name' autocomplete="off"/>
-          <input type="email" placeholder='Email' name="email" required id='email' autocomplete="off"/>
+          <input type="text" placeholder='Name' name="name" required id='name' autoComplete="off"/>
+          <input type="email" placeholder='Email' name="email" required id='email' autoComplete="off"/>
 
           </div>
        
-        <input type="text" placeholder='Subject' name="subject" id='subject' required autocomplete="off"/>
-        <textarea name="message" id="message" cols="30" rows="10" placeholder='Message' required autocomplete="off"/>
+        <input type="text" placeholder='Subject' name="subject" id='subject' required autoComplete="off"/>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder='Message' required autoComplete="off"/>
         <button>Send Message</button>
         </form>
       </div>
