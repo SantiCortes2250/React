@@ -3,8 +3,8 @@ import styles from '../CSS/message.module.css'
 
 const Message = ({message}) => {
   return (
-    <div className={styles.container}>
-        <p>{message}</p>
+    <div className={message ? styles.container : styles.containerOff}>
+        <p>Thanks for you message!!</p>
     </div>
   )
 }

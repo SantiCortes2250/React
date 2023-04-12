@@ -11,7 +11,8 @@ const Contact = () => {
 
   const refForm = useRef();
 
-  const [message, setMessage] = useState('')
+  const [message, setMessage] = useState(false)
+
 
   
   
@@ -28,13 +29,19 @@ const Contact = () => {
     emailjs.sendForm(serviceId, templateId, refForm.current , apiKey)
     .then((res) => {
       if(res.text === 'OK'){
-        setMessage('enviado')
+        setMessage(true)
+        
         document.getElementById('name').value = ''
         document.getElementById('email').value = ''
         document.getElementById('subject').value = ''
         document.getElementById('message').value = ''
 
       }
+
+      setTimeout(() => {
+        setMessage(false)
+        
+      }, 3000);
 
      
     })
@@ -51,7 +58,8 @@ const Contact = () => {
     <>
     <Message
     message={message}
-    />
+    />  
+   
 
     <div className={style.container}>
       <h2 className={style.section}>
@@ -68,13 +76,13 @@ const Contact = () => {
 
         >
           <div className={style.email}>
-          <input type="text" placeholder='Name' name="name" required id='name'/>
-          <input type="email" placeholder='Email' name="email" required id='email' />
+          <input type="text" placeholder='Name' name="name" required id='name' autocomplete="off"/>
+          <input type="email" placeholder='Email' name="email" required id='email' autocomplete="off"/>
 
           </div>
        
-        <input type="text" placeholder='Subject' name="subject" id='subject' required/>
-        <textarea name="message" id="message" cols="30" rows="10" placeholder='Message' required/>
+        <input type="text" placeholder='Subject' name="subject" id='subject' required autocomplete="off"/>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder='Message' required autocomplete="off"/>
         <button>Send Message</button>
         </form>
       </div>
