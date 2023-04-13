@@ -3,13 +3,14 @@ import Nav from "./Nav";
 import styles from "../CSS/header.module.css";
 import Typewriter from "typewriter-effect";
 import info from '../../info.json'
+import { Link } from "react-scroll";
 
 
 export const Header = () => {
   return (
     <>
       <Nav />
-        <div className={styles.container}>
+        <div className={styles.container} id="home">
           <div className={styles.info}>
             <p>Hi There!</p>
             <div className={styles.writer}>
@@ -28,7 +29,8 @@ export const Header = () => {
               />
             </div>
             <p>Improving every day.</p>
-            <button>Contact Me</button>
+            <Link to="contact" spy={true} offset={-70} duration={500} smooth={true}><button>Contact Me</button></Link>
+        
           </div>
           <div className={styles.contact}>
             <div className={styles.dates}>

@@ -7,7 +7,7 @@ const Resume = () => {
 
 
   return (
-    <div className={style.container}>
+    <div className={style.container} id='resume'>
       <h2 className={style.section}>
         My Resume
         <span className={style.title}> Resume </span>

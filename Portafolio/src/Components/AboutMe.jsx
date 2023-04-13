@@ -3,9 +3,13 @@ import styles from "../CSS/about.module.css";
 import image from '../Assets/img/header.png';
 import info from '../../info.json'
 
+
 const AboutMe = () => {
+
+
+  
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='about' >
       <h2 className={styles.section}>
         About me
         <span className={styles.title}> About </span>

@@ -16,6 +16,8 @@ import Skills from "./Components/Slick/Skills"
 
 
 
+
+
 function App() {
   
 
@@ -25,7 +27,9 @@ function App() {
     <Follow/>
     <div className="header">
       
-      <Header/>
+      <Header  />
+  
+      
     </div>
     <div className="main">
       <AboutMe/>

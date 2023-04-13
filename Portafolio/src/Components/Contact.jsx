@@ -61,7 +61,7 @@ const Contact = () => {
     />  
    
 
-    <div className={style.container}>
+    <div className={style.container} id='contact'>
       <h2 className={style.section}>
         Get in Touch
         <span className={style.title}> Contact </span>

@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../src/Assets/img/logo.png";
 import styles from "../CSS/nav.module.css";
+import { Link } from "react-scroll";
 
 const Nav = () => {
   const [nav, setNav] = useState(false);
+  const [navbarColor, setNavbarColor] = useState("transparent");
+  
+
 
   const Nav = nav ? (
     <button className={styles.close} onClick={(e) => setNav(false)}>
@@ -21,29 +25,49 @@ const Nav = () => {
     </button>
   );
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPosition = window.pageYOffset;
+
+      if (currentScrollPosition > 0) {
+
+        setNavbarColor("rgba(0, 0, 0, 0.834)"); 
+      } else {
+     
+        setNavbarColor("transparent");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      <div className={styles.nav}>
-        <div className={styles.logo}>
-          <a href="">
-            <img src={logo} alt="" className={styles.img} />
-          </a>
+      <div className={styles.nav} style={{ backgroundColor: navbarColor}}>
+       
+
+        <div className={styles.logo}  >
+        <Link to="home" spy={true} offset={0} duration={500} smooth={true}>
+          <img src={logo} alt="" className={styles.img} />
+        </Link>
         </div>
         <div className={styles.links}>
           <nav className={styles.linksN}>
-            <a href="">About Me</a>
-            <a href="">Resume</a>
-            <a href="">Projects</a>
-            <a href="">Contact</a>
+            <Link to="about" spy={true} offset={-50} duration={500} smooth={true}>About Me</Link>
+            <Link to="resume" spy={true} offset={-20} duration={500} smooth={true}>Resume</Link>
+            <Link to="projects" spy={true} offset={-120} duration={500} smooth={true}>Projects</Link>
+            <Link to="contact" spy={true} offset={-70} duration={500} smooth={true}>Contact</Link>
           </nav>
           {Nav}
         </div>
       </div>
       <nav className={nav ? styles.navOpen : styles.navClose}>
-        <a href="">About Me</a>
-        <a href="">Resume</a>
-        <a href="">Projects</a>
-        <a href="">Contact</a>
+            <Link to="about" spy={true} offset={50} duration={500} smooth={true}>About Me</Link>
+            <Link to="resume" spy={true} offset={50} duration={500} smooth={true}>Resume</Link>
+            <Link to="projects" spy={true} offset={-50} duration={500} smooth={true}>Projects</Link>
+            <Link to="contact" spy={true} offset={-50} duration={500} smooth={true}>Contact</Link>
       </nav>
     </>
   );
