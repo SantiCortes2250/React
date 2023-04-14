@@ -24,6 +24,8 @@ const Dashboard = () => {
 
   useEffect(() => {
     obtenerProyectos()
+
+    // eslint-disable-next-line
     
   }, [])
 

@@ -15,7 +15,7 @@ const Nav = ({open, setOpen, setBar}) => {
 
   return (
     <div className={styles.nav}>
-        <div className={styles.slidebar} onClick={e=> setBar(true)}>
+        <div className={styles.slidebar} onClick={()=> setBar(true)}>
           <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678746605/Projects/icons/menu-hamburguesa_kii38c.png" alt="" />
             
         </div>

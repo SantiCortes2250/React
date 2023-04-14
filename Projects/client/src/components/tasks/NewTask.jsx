@@ -25,14 +25,17 @@ const NewTask = () => {
     name: "",
   });
 
+
   const { name } = task;
 
   const HandleChange = (e) => {
     setTask({
-      ...name,
+      ...task,
       [e.target.name]: e.target.value,
     });
+    
   };
+
 
   const HandleSubmit = (e) => {
     e.preventDefault();
@@ -42,14 +45,16 @@ const NewTask = () => {
     }
 
     //Si es una tarea nueva o tarea para editar
-    if (tareaSeleccionada === null) {
+    if (tareaSeleccionada !== null) {
+      actualizarTarea(task);
       // agregar la nueva tarea al state de tareas
+    
+   
+    }else{
       task.idProyecto = proyectoActual.id;
       agregarTarea(task);
 
-   
-    }else{
-        actualizarTarea(task);
+       
         
     }
     //obtener y filtrar las tareas del proyecto actual
@@ -75,7 +80,7 @@ const NewTask = () => {
           name="name"
           onChange={HandleChange}
         />
-        <button>{tareaSeleccionada ? "Edit Task" : "New Task"}</button>
+        <button >{tareaSeleccionada ? "Edit Task" : "New Task"}</button>
       </form>
     </div>
   );

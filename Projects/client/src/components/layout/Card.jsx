@@ -24,22 +24,25 @@ const Card = ({proyecto}) => {
 
 
   return (
-    <NavLink to={'/projects'} className={styles.nav}>
+   
       <div className={styles.card} onClick={() => HandleClick(proyecto.id)}>
-        <div className={styles.info}>
+         <NavLink to={'/projects'} className={styles.nav}>
+         <div className={styles.info}>
         <h2>{proyecto.name}</h2>
         </div>
-        <NavLink to={'#'}>
+
+         </NavLink>
+       
+       
         <div className={styles.action} >
           <button onClick={() => eliminarProyecto(proyecto.id)}>Delete</button>
         </div>
 
-        </NavLink>
+    
         
     </div>
     
 
-    </NavLink>
       
   )
 }

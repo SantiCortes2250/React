@@ -47,6 +47,7 @@ const TareaState = props => {
     }
 
     const agregarTarea = (tarea) =>{
+        tarea.id = state.tareas.length + 1;
       
         dispatch({
             type: AGREGAR_TAREA,
@@ -73,6 +74,8 @@ const TareaState = props => {
     }
 
     const actualizarTarea = tarea =>{
+   
+       
         dispatch({
             type: ACTUALIZAR_TAREA,
             payload: tarea
