@@ -72,13 +72,13 @@ function App() {
       <p className={styles.title}>{word}</p>
         <ListImages 
           key={images.id}
-          images={images}
+          images={images} 
         />
-
+        <div className={styles.paginators}>
         {(paginator === 1) ? null : 
         (<button
         type="button"
-        className=""
+        className={styles.paginator}
         onClick={PaginateFormer}
         >
           &laquo; back 
@@ -89,12 +89,16 @@ function App() {
         (
           <button
           type="button"
-          className=""
+          className={styles.paginator}
           onClick={PaginateFollowing}
           >
             next &raquo;
           </button>
         )}
+
+        </div>
+
+       
       </div>
     </div>
   )
