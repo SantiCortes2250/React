@@ -7,20 +7,32 @@ import Profile from "./components/Pages/Profile";
 import Projects from "./components/Pages/Projects";
 import ProyectoState from "./context/proyectos/ProyectoState";
 import TareaState from "./context/tareas/tareaState";
+import AlertaState from "./context/alertas/alertaState";
+import AuthState from "./context/autenticacion/AuthState";
+
+
 
 const App = () => {
+  
+
+
+
   return (
     <ProyectoState>
       <TareaState>
-        <BrowserRouter>
-          <Routes>
-            <Route exact path="/" element={<Login />} />
-            <Route exact path="/new-account" element={<NewAccount />} />
-            <Route exact path="/dashboard" element={<Dashboard />} />
-            <Route exact path="/projects" element={<Projects />} />
-            <Route exact path="/profile" element={<Profile />} />
-          </Routes>
-        </BrowserRouter>
+        <AlertaState>
+          <AuthState>
+          <BrowserRouter>
+            <Routes>
+              <Route exact path="/" element={<Login />} />
+              <Route exact path="/new-account" element={<NewAccount />} />
+              <Route exact path="/dashboard" element={<Dashboard />} />
+              <Route exact path="/projects" element={<Projects />} />
+              <Route exact path="/profile" element={<Profile />} />
+            </Routes>
+          </BrowserRouter>
+          </AuthState>
+        </AlertaState>
       </TareaState>
     </ProyectoState>
   );

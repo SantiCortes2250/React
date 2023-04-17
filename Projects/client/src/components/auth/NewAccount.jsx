@@ -1,14 +1,53 @@
-import React, {useState} from 'react'
-import { NavLink } from 'react-router-dom'
+import React, {useContext, useState, useEffect} from 'react'
+import { NavLink, } from 'react-router-dom'
 import styles from '../../CSS/login.module.css'
+import alertaContext from '../../context/alertas/alertaContext'
+import authContext from '../../context/autenticacion/AuthContext'
+import { useNavigate } from "react-router-dom";
 
-const NewAccount = () => {
+
+
+const NewAccount = (props) => {
+
+  //useNavigate para redireccionar 
+  const navigate = useNavigate();
+
+  //Extraer los valores
+
+  const alertasContext = useContext(alertaContext)
+  const AuthContext = useContext(authContext)
+
+  const {alerta, mostrarAlerta} = alertasContext;
+  const {  mensaje, autenticado, registrarUsuario } = AuthContext;
+
+  //En caso de que el usuario se haya autenticado o registrado o sea un registro
+  useEffect(() => {
+    if(autenticado){
+      navigate('/dashboard');
+    }
+
+    if(mensaje){
+      mostrarAlerta(mensaje)
+
+
+    }
+   
+  }, [mensaje, autenticado, props.history])
+  
+
+
+
+
   const [newUser, setnewUser] = useState({
     name: "",
     email:"",
     password:"",
     confirmP: ""
   })
+
+  
+  const {name, email, password, confirmP} = newUser
+
 
 
 
@@ -23,15 +62,42 @@ const NewAccount = () => {
   const HandleSubmit = (e) =>{
     e.preventDefault()
 
-    if(name.trim === "" || email.trim() === "" || password.trim() === "" || confirmP.trim()){
-      alert('all inputs is requeries')
+    if(name.trim() === "" || email.trim() === "" || password.trim() === "" || confirmP.trim() === ""){
+      mostrarAlerta('all inputs is requeries', 'alertaError')
+      return;
     }
+
+    //password minimo de 6 caracteres
+    if(password.length < 6){
+      mostrarAlerta('Password require minimum 6 characters', 'alertaError')
+      return;
+
+    }
+
+
+    //Los dos password son iguales
+    if(password !== confirmP){
+      mostrarAlerta('Passwords are not the same', 'alertaError')
+      return;
+
+    }
+
+    //pasarlo al action
+
+    registrarUsuario({
+      name,
+      email,
+      password
+    })
+
+    
+
+
+
 
     
   }
 
-
-  const {name, email, password, confirmP} = newUser
 
 
 
@@ -39,6 +105,7 @@ const NewAccount = () => {
   return (
     <div className={styles.login}>
       <div className={styles.form}>
+        { alerta ? (<div className={`${alerta.categoria}`}>{alerta.msg}</div>) : null}
         <div className={styles.title}>
           <p>Create Account</p>
         </div>
@@ -53,7 +120,7 @@ const NewAccount = () => {
             value={name}
             onChange={HandleChange}
              />
-            <label className={styles.label} htmlFor='input'>Email*</label>
+            <label className={styles.label} htmlFor='input'>Name*</label>
             <div className={styles.underline}></div>
           </div>
           <div className={styles.container}>
@@ -64,7 +131,7 @@ const NewAccount = () => {
             value={email}
             onChange={HandleChange}
              />
-            <label className={styles.label} htmlFor='input'>Name*</label>
+            <label className={styles.label} htmlFor='input'>Email*</label>
             <div className={styles.underline}></div>
           </div>
           <div className={styles.container}>
