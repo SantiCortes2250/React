@@ -6,7 +6,7 @@ import styles from "./CSS/container.module.css"
 
 function App() {
 
-  const [word, setword] = useState('')
+  const [word, setword] = useState('Food')
   const [images, setimages] = useState([])
   const [paginator, setpaginator] = useState(1)
   const [totalPaginator, settotalPaginator] = useState(1)
