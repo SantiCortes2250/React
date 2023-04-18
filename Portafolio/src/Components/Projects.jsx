@@ -28,7 +28,8 @@ const Projects = () => {
 
       </div>
       <div className={styles.btn}>
-        <button>All projects</button>
+       
+          <a href='https://github.com/SantiCortes2250/React' target="_blank">All projects</a>
       </div>
     </div>
   )

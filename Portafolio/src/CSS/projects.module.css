@@ -95,18 +95,28 @@
   align-items: center;
 }
 
-.btn button {
+.btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 150px;
   height: 40px;
-  color: #009e66;
   font-size: 15px;
   border: 2px #009e66 solid;
   background-color: transparent;
   cursor: pointer;
   margin-bottom: 50px;
+
+
 }
 
-.btn button:hover {
+.btn  a{
+  text-decoration: none;
+  color: #009e66;
+
+}
+
+.btn a:hover {
   background-color: #009e66;
   color: white;
   transition: 0.5s all;
