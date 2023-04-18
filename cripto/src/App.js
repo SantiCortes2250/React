@@ -4,7 +4,7 @@ import React, {useState, useEffect} from "react";
 import Form from "./Components/Form";
 import Price from "./Components/Price";
 import Spinner from "./Components/Spinner.js/Spinner";
-import image from "./cryptomonedas.png";
+import image from "./main-img.png";
 
 
 
@@ -23,6 +23,7 @@ const Container = styled.div`
 const Image = styled.img`
   max-width: 100%;
   margin-top: 5rem;
+
 `;
 
 const Heading = styled.h1`
@@ -37,7 +38,7 @@ const Heading = styled.h1`
     content: "";
     width: 100px;
     height: 6px;
-    background-color: #66a2fe;
+    background-color: #fabb00;
     display: block;
   }
 `;

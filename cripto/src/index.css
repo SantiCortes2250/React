@@ -1,8 +1,8 @@
 body {
-  background-color: #0d2235;
+  background-color: #000000;
 }
 .error {
-  background-color: #b7322c;
+  background-color:  #ffc825;
   padding: 1rem;
   color: white;
   font-size: 18px;
