@@ -7,7 +7,15 @@ const ContainerSentence = styled.div`
     padding: 2rem;
     border-radius: .5rem;
     background-color: #fff;
-    max-width:800px;
+    max-width:700px;
+    height: 300px; 
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+
+
+    
   
     
     @media (min-width: 992px) {
