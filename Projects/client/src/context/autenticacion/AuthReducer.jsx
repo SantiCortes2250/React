@@ -17,9 +17,15 @@ export default (state, action) => {
                 mensaje: null
 
             }
+        case OBTENER_USUARIO:
+            return{
+                ...state,
+                usuario: action.payload
+            }
         case LOGIN_ERROR:
         case REGISTRO_ERROR:
-            localStorage.removeItem('token')
+           //localStorage.removeItem('token', action.payload.Token)
+        
             return{
                 ...state,
                 token: null,

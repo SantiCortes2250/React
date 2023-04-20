@@ -10,12 +10,12 @@ import {
     CERRAR_SESION
  } from '../../types'
 import clienteAxios from '../../components/config/axios'
-import tokenAuth from '../../components/config/tokenAuth'
+import tokenAuth from '../../components/config/token'
 
 const AuthState = (props) => {
 
     const initialState = {
-        token: localStorage.getItem('Token'),
+        token: localStorage.getItem('token'),
         autenticado: null,
         usuario: null,
         mensaje:null
@@ -30,7 +30,7 @@ const AuthState = (props) => {
     const registrarUsuario = async (datos) =>{
         try {
             const res = await clienteAxios.post('/api/users', datos)
-            console.log(res.data)
+           
 
             dispatch({
                 type: REGISTRO_EXITOSO,
@@ -54,6 +54,7 @@ const AuthState = (props) => {
 
     const usuarioAutenticado = async () =>{
         const token = localStorage.getItem('token');
+      
         if(token){
             tokenAuth(token)
         }
@@ -62,8 +63,13 @@ const AuthState = (props) => {
             const res = await clienteAxios.get('/api/auth')
             console.log(res.data)
             
+            dispatch({
+                 type: OBTENER_USUARIO,
+                 payload: res.data.user
+             })
+            
         } catch (error) {
-            console.log(error.response.data.msg)
+            console.log(error)
             dispatch({
                 type:LOGIN_ERROR
            
