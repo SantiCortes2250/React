@@ -67,41 +67,42 @@
         
     ],
     "Projects" : [
-        {
-            "project" : "Booker",
-            "Link" : "",
-            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677556129/Projects/portfolio_img_3_oj12nl.jpg",
-            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677637598/Projects/icons/iconBook_brp2ns.png"
-        },
+       
         {
             "project" : "Movie-Time",
-            "Link" : "",
-            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677556129/Projects/portfolio_img_2_nzqyvg.jpg",
+            "Link" : "https://movie-timeee.netlify.app/",
+            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682295507/Projects/moviet_pyjmwn.png",
             "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677637696/Projects/icons/iconMovie_y38ivq.png"
         },
         {
-            "project" : "shop-nice",
+            "project" : "StailR",
+            "Link" : "https://stailr.netlify.app/",
+            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682296233/Projects/bgcock_1_vvfphn.png",
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682296118/Projects/icons/cock_k3rjvf.png"
+        },
+        {
+            "project" : "PixelFree",
+            "Link" : "https://pixelfree.netlify.app/",
+            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682296538/Projects/bg-img_1_xydwc6.png",
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682296429/Projects/icons/img_ls6fmv.png"
+        },
+        {
+            "project" : "CriptoRC",
+            "Link" : "https://criptosrc.netlify.app/",
+            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682296650/Projects/cripto_1_s1jm21.png",
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682296747/Projects/icons/bitcoin_zg1hbp.png"
+        },
+        {
+            "project" : "DashPro",
             "Link" : "",
-            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677556129/Projects/portfolio_img_1_g6pras.jpg",
-            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677637748/Projects/icons/iconShopp_o7odpy.png"
+            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682297243/Projects/dash_1_khcbd0.png",
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682297004/Projects/icons/proje_tp7jbp.png"
         },
         {
             "project" : "Booker",
-            "Link" : "",
-            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677556129/Projects/portfolio_img_6_hzk0t0.jpg",
+            "Link" : "https://bookerweb.netlify.app",
+            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682295896/Projects/booker_1_tur1px.jpg",
             "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677637598/Projects/icons/iconBook_brp2ns.png"
-        },
-        {
-            "project" : "Movie-Time",
-            "Link" : "",
-            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677556129/Projects/portfolio_img_5_b8bocr.jpg",
-            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677637696/Projects/icons/iconMovie_y38ivq.png"
-        },
-        {
-            "project" : "shop-nice",
-            "Link" : "",
-            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677556129/Projects/portfolio_img_4_rns6wm.jpg",
-            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677637748/Projects/icons/iconShopp_o7odpy.png"
         }
     ]
 

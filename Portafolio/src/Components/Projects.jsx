@@ -16,7 +16,7 @@ const Projects = () => {
               <div className={styles.hover}>
                 <img src={project.icon} alt="" />
                 <p>{project.project}</p>
-                <a href="">Enlace</a>
+                <a href={project.Link} target='_blank'>Link</a>
               </div>
               <div className={styles.image}>
                 <img src={project.image} alt="" />
