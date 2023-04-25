@@ -30,6 +30,7 @@ const AuthState = (props) => {
     const registrarUsuario = async (datos) =>{
         try {
             const res = await clienteAxios.post('/api/users', datos)
+    
            
 
             dispatch({
@@ -38,7 +39,7 @@ const AuthState = (props) => {
             })
             
             //Obtener usuario
-            usuarioAutenticado();
+            usuarioAutenticado(res.data.Token);
         } catch (error) {
             console.log(error.response.data.msg)
 
@@ -52,8 +53,9 @@ const AuthState = (props) => {
 
     //Retorna el usuario autenticado
 
-    const usuarioAutenticado = async () =>{
-        const token = localStorage.getItem('token');
+    const usuarioAutenticado = async (token) =>{
+     
+
       
         if(token){
             tokenAuth(token)
@@ -61,7 +63,7 @@ const AuthState = (props) => {
 
         try {
             const res = await clienteAxios.get('/api/auth')
-            console.log(res.data)
+          
             
             dispatch({
                  type: OBTENER_USUARIO,

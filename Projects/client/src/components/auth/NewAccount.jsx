@@ -23,7 +23,7 @@ const NewAccount = (props) => {
   //En caso de que el usuario se haya autenticado o registrado o sea un registro
   useEffect(() => {
     if(autenticado){
-      //navigate('/dashboard');
+      navigate('/dashboard');
     }
 
     if(mensaje){
