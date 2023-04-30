@@ -27,6 +27,8 @@ const AuthState = (props) => {
 
     //funciones
 
+    //registro de usuario
+
     const registrarUsuario = async (datos) =>{
         try {
             const res = await clienteAxios.post('/api/users', datos)
@@ -39,7 +41,7 @@ const AuthState = (props) => {
             })
             
             //Obtener usuario
-            usuarioAutenticado(res.data.Token);
+            usuarioAutenticado();
         } catch (error) {
             console.log(error.response.data.msg)
 
@@ -51,12 +53,45 @@ const AuthState = (props) => {
         }
     }
 
+
+        //inicio de sesion del usuario
+
+        const iniciarSesion = async(datos) =>{
+            try {
+                const res = await clienteAxios.post('/api/auth/', datos)
+           
+    
+                dispatch({
+                    type: LOGIN_EXITOSO,
+                    payload: res.data
+                })
+                
+                //Obtener usuario
+                usuarioAutenticado();
+    
+                
+             
+    
+    
+               
+                
+            } catch (error) {
+                console.log(error)
+                dispatch({
+                    type:LOGIN_ERROR,
+                    payload: error.response.data.msg
+               
+                })
+                
+            }
+    
+        }
+
     //Retorna el usuario autenticado
 
-    const usuarioAutenticado = async (token) =>{
-     
+    const usuarioAutenticado = async () =>{
+        const token = localStorage.getItem('token');
 
-      
         if(token){
             tokenAuth(token)
         }
@@ -79,6 +114,17 @@ const AuthState = (props) => {
         }
     }
 
+    //cerrar sesion
+
+    const cerrarSesion = () =>{
+        dispatch({
+            type: CERRAR_SESION,
+
+        })
+    }
+
+
+
 
 
 
@@ -89,7 +135,10 @@ const AuthState = (props) => {
             autenticado: state.autenticado,
             usuario: state.usuario,
             mensaje: state.mensaje,
-            registrarUsuario
+            registrarUsuario,
+            iniciarSesion,
+            usuarioAutenticado,
+            cerrarSesion
 
         }}
     >

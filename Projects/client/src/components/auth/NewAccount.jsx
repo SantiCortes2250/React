@@ -42,11 +42,12 @@ const NewAccount = (props) => {
     name: "",
     email:"",
     password:"",
-    confirmP: ""
+    confirmP: "",
+    image: null
   })
 
   
-  const {name, email, password, confirmP} = newUser
+  const {name, email, password, confirmP, image} = newUser
 
 
 
@@ -87,7 +88,8 @@ const NewAccount = (props) => {
     registrarUsuario({
       name,
       email,
-      password
+      password,
+      image
     })
 
     
@@ -119,6 +121,8 @@ const NewAccount = (props) => {
             id='name'
             value={name}
             onChange={HandleChange}
+            autoComplete='off'
+         
              />
             <label className={styles.label} htmlFor='input'>Name*</label>
             <div className={styles.underline}></div>
@@ -130,6 +134,8 @@ const NewAccount = (props) => {
             id='email'
             value={email}
             onChange={HandleChange}
+            autoComplete='off'
+         
              />
             <label className={styles.label} htmlFor='input'>Email*</label>
             <div className={styles.underline}></div>
