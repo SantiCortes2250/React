@@ -98,6 +98,16 @@
 }
 
 
+.info button{
+    width: 100px;
+    height: 30px;
+    background-color: #009E66;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
 @media (min-width: 600px) {
 
     .container{

@@ -3,7 +3,7 @@ import info from '../../info.json'
 import style from '../CSS/resume.module.css'
 
 
-const Resume = () => {
+const Resume = ({isOpen, setIsOpen, setId}) => {
 
 
   return (
@@ -23,7 +23,9 @@ const Resume = () => {
                 <h4>{expe.company}</h4>
                 <p>{expe.year}</p>
                 <p>{expe.work}</p>
+                <button onClick={()=> {setIsOpen(!isOpen), setId(expe.id)}}>Tasks</button>
                 </div>
+              
               </div>
             ))
           }

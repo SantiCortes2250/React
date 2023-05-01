@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "../CSS/about.module.css";
-import image from '../Assets/img/header.png';
+
 import info from '../../info.json'
 
 
@@ -17,10 +17,10 @@ const AboutMe = () => {
       </h2>
       <div className={styles.about}>
         <div className={styles.img}>
-          <img src={image} alt="" />
+          <img src={info.image} alt="" />
         </div>
           <div className={styles.info}>
-              <h2>I'm Santi Rincon, a Freelancer and Web Developer</h2>
+              <h2>I'm Santi Rincon, a Full Stack Developer and Freelancer</h2>
               <p>{info.Description}</p>
               <hr/>
               <div className={styles.dates}>
@@ -29,7 +29,7 @@ const AboutMe = () => {
                   <p>Phone:<span>{info.Phone}</span></p>
                   <p>Email:<span>{info.Email}</span></p>
               </div>
-                <a href='./cv.pdf' download> <button>Download CV</button></a>
+                <a href='./cv-santiagoRincon.pdf' download> <button>Download CV</button></a>
            
           </div>
       </div>

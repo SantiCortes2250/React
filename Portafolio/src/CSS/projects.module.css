@@ -73,10 +73,19 @@
 }
 
 .hover a {
-  text-decoration: none;
+ 
   color: #009e66;
-  font-size: 17px;
+  
+
+  
 }
+
+.hover a svg{
+
+  width: 25px;
+
+}
+
 
 .card h2 {
   margin-top: 20px;
