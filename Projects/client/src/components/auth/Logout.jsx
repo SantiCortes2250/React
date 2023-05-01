@@ -12,7 +12,7 @@ const Logout = () => {
 
   return (
     <>
-    <NavLink onClick={() => cerrarSesion()} className={styles.logout}><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1679096981/Projects/icons/cerrarsesion_o4imu1.png" alt="" />Logout</NavLink>
+    <NavLink to={'/'} onClick={() => cerrarSesion()} className={styles.logout}><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1679096981/Projects/icons/cerrarsesion_o4imu1.png" alt="" />Logout</NavLink>
     </>
   )
 }

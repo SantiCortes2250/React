@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./components/auth/Login";
 import NewAccount from "./components/auth/NewAccount";
 import Dashboard from "./components/Pages/Dashboard";
@@ -10,6 +10,8 @@ import TareaState from "./context/tareas/tareaState";
 import AlertaState from "./context/alertas/alertaState";
 import AuthState from "./context/autenticacion/AuthState";
 import tokenAuth from "./components/config/token";
+import PrivateRute from "./components/rutes/PrivateRute";
+
 
 
 
@@ -34,15 +36,20 @@ const App = () => {
       <TareaState>
         <AlertaState>
           <AuthState>
+          
           <BrowserRouter>
             <Routes>
-              <Route exact path="/" element={<Login />} />
-              <Route exact path="/new-account" element={<NewAccount />} />
-              <Route exact path="/dashboard" element={<Dashboard />} />
+            <Route element={<PrivateRute/>}>
+              <Route exact path="/Dashboard" element={<Dashboard />} />
               <Route exact path="/projects" element={<Projects />} />
               <Route exact path="/profile" element={<Profile />} />
+            </Route>
+            <Route exact path="/" element={<Login />} />
+            <Route exact path="/new-account" element={<NewAccount />} />
+            <Route path="*" element={ <Navigate to="/" />}/>
             </Routes>
           </BrowserRouter>
+         
           </AuthState>
         </AlertaState>
       </TareaState>

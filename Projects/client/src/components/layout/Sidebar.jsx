@@ -51,7 +51,7 @@ const Sidebar = ({setBar, bar}) => {
             <div className={more % 2 == 0 ? styles.projects2 : styles.projects}>
               {proyectos.length === 0 ?  <span>No projects</span> :
                   proyectos.map(proyecto => 
-                    <NavLink to={'/projects'} key={proyecto.id} onClick={() => HandleClick(proyecto.id)}><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678935396/Projects/icons/flecha_c65oeq.png" alt="" /> {proyecto.name}</NavLink>
+                    <NavLink to={'/projects'} key={proyecto._id} onClick={() => HandleClick(proyecto.id)}><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678935396/Projects/icons/flecha_c65oeq.png" alt="" /> {proyecto.name}</NavLink>
               ) }
              
           

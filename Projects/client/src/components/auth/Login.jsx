@@ -4,6 +4,7 @@ import styles from '../../CSS/login.module.css'
 import authContext from '../../context/autenticacion/AuthContext'
 import alertaContext from '../../context/alertas/alertaContext'
 import { useNavigate } from "react-router-dom";
+import PrivateRute from '../rutes/PrivateRute'
 
 
 
@@ -18,7 +19,7 @@ const Login = () => {
   const auth = useContext(authContext)
   
   const {alerta, mostrarAlerta} = alertasContext;
-  const {mensaje, autenticado, iniciarSesion} = auth
+  const {mensaje, autenticado, iniciarSesion,  usuarioAutenticado} = auth
 
   const [user, setUser] = useState({
     email:"",
@@ -67,6 +68,10 @@ const Login = () => {
         email,
         password
       })
+
+
+      
+     
   }
 
 
@@ -119,6 +124,7 @@ const Login = () => {
       <p className={styles.p}>Don't have an account? <NavLink to={'/new-account'}>
           New Account
         </NavLink></p>
+      
       
     </div>
   )

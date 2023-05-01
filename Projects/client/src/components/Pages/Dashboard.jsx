@@ -19,6 +19,8 @@ const Dashboard = () => {
   const { proyectos, obtenerProyectos } = proyectosContext;
 
 
+
+
   const [bar, setBar] = useState(false)
   const [open, setOpen] = useState(1)
 
@@ -56,7 +58,7 @@ const Dashboard = () => {
       {proyectos.length === 0 ?  <h4>No Projects</h4> : (
           proyectos.map(proyecto =>
             <Card
-            key={proyecto.id}
+            key={proyecto._id}
             proyecto={proyecto}
             />
           )
