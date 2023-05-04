@@ -7,23 +7,71 @@
     flex-direction: column;
 }
 
+
+
+.containerLogo{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
+  background-color: red;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.containerLogo2{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  background-color: red;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+
+.imgIcon{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 150px;
+}
+
+.imgLogo{
+  width: 300px;
+  height: 300px;
+  margin-top: 100px;
+
+}
+
+
+.imgLogo2{
+
+  margin-top: 30px;
+  margin-left: 100px;
+
+}
+
 .form{
     position: absolute;
     display: flex;
     flex-direction: column;
-    grid-gap: 30px;
-    width: 300px;
-    
-    bottom: 20px;
+    width: 380px;
+    bottom: 40px;
     margin-bottom: 20px;
     padding: 30px 0px 0px 0px;
-    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  
+   
 }
 
 .p{
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
 
+}
+
+.p a{
+  color: red;
 }
 
 .form form{
@@ -31,7 +79,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 20px;
+ 
 }
 
 
@@ -45,63 +93,64 @@
 
 .container {
     display: flex;
-    
     position: relative;
-    margin-top: 30px;
     margin-bottom: 30px;
     width: 80%;
   }
   
   .container input {
     font-size: 15px;
-    width: 80%;
-    border: none;
-    border-bottom: 2px solid #ccc;
-    padding: 5px 0;
-    background-color: transparent;
+    width: 100%;
+    height: 50px;
+    background-color: #f6f6f6;
     outline: none;
+    border-radius: 50px;
+    border: none;
+    padding-left: 60px;
   }
   
   .container label {
+    display: flex;
+    align-items: center;
     position: absolute;
-    top: 0;
-    left: 0;
-    color: #ccc;
+    top: 15px;
+    left: 30px;
+    color: #979797;
     transition: all 0.3s ease;
     pointer-events: none;
+  
    
   }
-  
-  .container input:focus ~ label,
-  .container input:valid ~ label {
-    top: -20px;
-    font-size: 16px;
-    color: #333;
+
+
+  .container label img{
+    margin-right: 10px;
+    width: 20px;
+   
+    
   }
-  
-  .container .underline {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background-color: #333;
-    transform: scaleX(0);
-    transition: all 0.3s ease;
+
+
+  .container input:focus+label{
+    color: transparent;
   }
+
   
-  .container input:focus ~ .underline,
-  .container input:valid ~ .underline {
-    transform: scaleX(1);
-  }
+
+ 
+  
 
 
   .btn{
   
-    width: 50%;
+    width: 80%;
     height: 40px;
     border: none;
-    border-radius: 20px;
+    border-radius: 50px;
+    background-color: rgb(255, 26, 26);
+    color: white;
+    font-size: 16px;
+    
 
   }
 

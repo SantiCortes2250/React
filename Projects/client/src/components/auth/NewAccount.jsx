@@ -106,10 +106,14 @@ const NewAccount = (props) => {
   
   return (
     <div className={styles.login}>
+       <div className={styles.containerLogo2}>
+      <img className={styles.imgIcon} src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678939561/Projects/icons/DashPro-movile_cjdo1y.png" alt="" />
+      <div className={styles.imgLogo2}><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1683174110/Projects/icons/correo-electronico_dpklfe.png" alt="" /></div>
+      
+      </div>
       <div className={styles.form}>
         { alerta ? (<div className={`${alerta.categoria}`}>{alerta.msg}</div>) : null}
         <div className={styles.title}>
-          <p>Create Account</p>
         </div>
         <form
         onSubmit={HandleSubmit}
@@ -122,10 +126,11 @@ const NewAccount = (props) => {
             value={name}
             onChange={HandleChange}
             autoComplete='off'
+            placeholder='Name'
          
              />
-            <label className={styles.label} htmlFor='input'>Name*</label>
-            <div className={styles.underline}></div>
+            <label className={styles.label} htmlFor='input'><img src='https://res.cloudinary.com/dhbi86hxn/image/upload/v1683171686/Projects/icons/usuario_z3za3c.png'></img></label>
+         
           </div>
           <div className={styles.container}>
             <input 
@@ -135,10 +140,11 @@ const NewAccount = (props) => {
             value={email}
             onChange={HandleChange}
             autoComplete='off'
+            placeholder='Email'
          
              />
-            <label className={styles.label} htmlFor='input'>Email*</label>
-            <div className={styles.underline}></div>
+            <label className={styles.label} htmlFor='input'><img src='https://res.cloudinary.com/dhbi86hxn/image/upload/v1683171880/Projects/icons/email_hp5pm3.png'></img></label>
+          
           </div>
           <div className={styles.container}>
             <input 
@@ -147,9 +153,10 @@ const NewAccount = (props) => {
             id='password'
             value={password}
             onChange={HandleChange}
+            placeholder='Password'
              />
-            <label className={styles.label} htmlFor='input'>Password*</label>
-            <div className={styles.underline}></div>
+           <label className={styles.label}  htmlFor='password'><img src='https://res.cloudinary.com/dhbi86hxn/image/upload/v1683171306/Projects/icons/bloquear_1_n6cg6y.png'></img></label>
+          
           </div>
           <div className={styles.container}>
             <input 
@@ -158,9 +165,10 @@ const NewAccount = (props) => {
             id='confirmP'
             value={confirmP}
             onChange={HandleChange}
+            placeholder='Repeat Password'
              />
-            <label className={styles.label} htmlFor='input'>Repeat Password*</label>
-            <div className={styles.underline}></div>
+           <label className={styles.label}  htmlFor='password'><img src='https://res.cloudinary.com/dhbi86hxn/image/upload/v1683171306/Projects/icons/bloquear_1_n6cg6y.png'></img></label>
+      
           </div>
           <button className={styles.btn}>Register Now</button>
         </form>

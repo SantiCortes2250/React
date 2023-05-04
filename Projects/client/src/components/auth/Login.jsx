@@ -82,12 +82,15 @@ const Login = () => {
   
   return (
     <div className={styles.login}>
+      <div className={styles.containerLogo}>
+      <img className={styles.imgIcon} src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678939561/Projects/icons/DashPro-movile_cjdo1y.png" alt="" />
+      <img className={styles.imgLogo} src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1683172938/Projects/icons/trabajo-en-equipo_1_hxpn8g.png" alt="" />
+      
+      </div>
       <div className={styles.form}>
         <div className={styles.title}>
         { alerta ? (<div className={`${alerta.categoria}`}>{alerta.msg}</div>) : null}
-          <h1>Hello</h1>
-         
-          <p>Sign into your Acoount</p>
+        
         </div>
         <form
         onSubmit={HandleSubmit}
@@ -100,11 +103,12 @@ const Login = () => {
             value={email}
             onChange={HandleChange}
             autoComplete='off'
+            placeholder='Email'
          
             
              />
-            <label className={styles.label} htmlFor='input'>Email*</label>
-            <div className={styles.underline}></div>
+            <label className={styles.label} htmlFor='input'><img src='https://res.cloudinary.com/dhbi86hxn/image/upload/v1683171880/Projects/icons/email_hp5pm3.png'></img></label>
+          
           </div>
           <div className={styles.container}>
             <input 
@@ -113,10 +117,11 @@ const Login = () => {
             id='password'
             value={password}
             onChange={HandleChange}
+            placeholder='Password'
            
              />
-            <label className={styles.label}  htmlFor='password'>Password*</label>
-            <div className={styles.underline}></div>
+            <label className={styles.label}  htmlFor='password'><img src='https://res.cloudinary.com/dhbi86hxn/image/upload/v1683171306/Projects/icons/bloquear_1_n6cg6y.png'></img></label>
+       
           </div>
           <button className={styles.btn}>Log in</button>
         </form>
