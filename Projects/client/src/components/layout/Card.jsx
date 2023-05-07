@@ -35,7 +35,7 @@ const Card = ({proyecto}) => {
        
        
         <div className={styles.action} >
-          <button onClick={() => eliminarProyecto(proyecto.id)}>Delete</button>
+          <button onClick={() => eliminarProyecto(proyecto._id)}>Delete</button>
         </div>
 
     

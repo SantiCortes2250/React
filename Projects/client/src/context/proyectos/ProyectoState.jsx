@@ -95,13 +95,13 @@ const ProyectoState = props =>{
 
         try {
 
-            const  res = await clienteAxios.delete('/api/projects/', idProyecto)
-            console.log(res)
+            await clienteAxios.delete(`/api/projects/${idProyecto}`)
+           
 
-            // dispatch({
-            //     type: ELIMINAR_PROYECTO,
-            //     payload: 
-            // })
+             dispatch({
+                 type: ELIMINAR_PROYECTO,
+                 payload: idProyecto
+            })
             
         } catch (error) {
             console.log(error)

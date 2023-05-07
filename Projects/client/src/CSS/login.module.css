@@ -14,9 +14,14 @@
   justify-content: center;
   width: 100%;
   height: 350px;
-  background-color: red;
+
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
+}
+
+.containerLogo svg{
+  position: absolute;
+
 }
 
 .containerLogo2{
@@ -24,9 +29,14 @@
   justify-content: center;
   width: 100%;
   height: 200px;
-  background-color: red;
+
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
+}
+
+.containerLogo2 svg{
+  position: absolute;
+
 }
 
 
@@ -40,7 +50,8 @@
 .imgLogo{
   width: 300px;
   height: 300px;
-  margin-top: 100px;
+  margin-top: 50px;
+  z-index: 2;
 
 }
 
@@ -49,6 +60,7 @@
 
   margin-top: 30px;
   margin-left: 100px;
+  z-index: 2;
 
 }
 
@@ -153,5 +165,35 @@
     
 
   }
+
+
+  @media(max-width: 800px){
+    .containerLogo{
+      background-color: #ff0000;
+      height: 200px;
+    }
+
+    .containerLogo2{
+      background-color: #ff0000;
+      height: 200px;
+    }
+
+    
+
+
+  }
+
+  @media(max-width: 400px){
+    .imgLogo{
+
+      margin-top: 100px;
+    
+    
+    }
+
+  }
+
+
+
 
  

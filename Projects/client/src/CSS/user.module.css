@@ -56,3 +56,35 @@
     height: 100%;
 
 }
+
+.info{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    grid-gap: 15px;
+}
+
+.info h4{
+    color: white;
+    display: flex;
+    font-size: 20px;
+
+}
+
+.info p{
+    color: #5c5c5c;
+    margin-left: 10px;
+}
+
+
+@media(min-width: 900px){
+    .cover{
+        height: 300px;
+        
+        
+    
+    }
+
+}
