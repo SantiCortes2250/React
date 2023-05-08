@@ -25,7 +25,7 @@ const Card = ({proyecto}) => {
 
   return (
    
-      <div className={styles.card} onClick={() => HandleClick(proyecto.id)}>
+      <div className={styles.card} onClick={() => HandleClick(proyecto._id)}>
          <NavLink to={'/projects'} className={styles.nav}>
          <div className={styles.info}>
         <h2>{proyecto.name}</h2>

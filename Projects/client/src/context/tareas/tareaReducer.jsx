@@ -14,17 +14,17 @@ export default (state, action) =>{
         case MOSTRAR_TAREAS:
             return{
                 ...state,
-                tareasProyecto: state.tareas.filter(tarea => tarea.idProyecto === action.payload)
+                tareasProyecto: state.tareasProyecto.filter(tarea => tarea.idProyecto === action.payload)
             };
         case AGREGAR_TAREA:
             return{
                 ...state,
-                tareas: [...state.tareas, action.payload]
+                tareasProyecto: [...state.tareasProyecto, action.payload]
             }
         case ELIMINAR_TAREA:
             return{
                 ...state,
-                tareas: state.tareas.filter(tarea => tarea.id !== action.payload)
+                tareasProyecto: state.tareasProyecto.filter(tarea => tarea.id !== action.payload)
             }
         case TAREA_ACTUAL:
             return{
@@ -34,7 +34,7 @@ export default (state, action) =>{
         case ACTUALIZAR_TAREA:
             return{
                 ...state,
-                tareas: state.tareas.map(tarea => tarea.id === action.payload.id ? action.payload : tarea),
+                tareasProyecto: state.tareasProyecto.map(tarea => tarea.id === action.payload.id ? action.payload : tarea),
                 tareaSeleccionada: null
 
 

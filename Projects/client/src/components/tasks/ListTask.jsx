@@ -15,15 +15,15 @@ const ListTask = () => {
 
   return (
     <div className={styles.container}>
-      <h2>{proyectoActual.name}</h2>
+       <h2>{proyectoActual.name}</h2> 
       <div className={styles.tasks}>
         {tareasProyecto.length === 0 ? (
           <h4>No hay Tareas</h4>
         ) : (
           <TransitionGroup>
-            {tareasProyecto.map((task) => (
+            {tareasProyecto.map((task, index) => (
               <CSSTransition
-               key={task.id}
+               key={index}
                timeout={1000}
                classNames="tarea"
 

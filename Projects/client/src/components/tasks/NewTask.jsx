@@ -51,14 +51,14 @@ const NewTask = () => {
     
    
     }else{
-      task.idProyecto = proyectoActual.id;
+      task.project = proyectoActual._id;
       agregarTarea(task);
 
        
         
     }
     //obtener y filtrar las tareas del proyecto actual
-    mostrarTareas(proyectoActual.id);
+    mostrarTareas(proyectoActual._id);
 
     //reinicar el form
     setTask({
