@@ -32,7 +32,7 @@ export default (state, action) =>{
         case OBTENER_PROYECTO:
             return{
                 ...state,
-                proyecto: state.proyectos.filter(proyecto => proyecto.id === action.payload)
+                proyecto: state.proyectos.filter(proyecto => proyecto._id === action.payload)
                 
             }
         case ELIMINAR_PROYECTO:

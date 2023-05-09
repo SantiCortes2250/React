@@ -27,12 +27,12 @@ const alertaState = (props) => {
         })
 
 
-        setTimeout(() => {
+      
             dispatch({
                 type: OCULTAR_ALERTA
             })
             
-        }, 5000);
+  
 
     }
 

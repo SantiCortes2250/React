@@ -13,6 +13,8 @@ const PrivateRoute = () => {
 
   useEffect(() => {
     usuarioAutenticado()
+
+    // eslint-disable-next-line
     
   }, [])
   

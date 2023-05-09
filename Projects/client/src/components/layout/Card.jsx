@@ -14,6 +14,7 @@ const Card = ({proyecto}) => {
   const {  mostrarTareas } = tareasContext;
 
   const HandleClick = id =>{
+
     obtenerProyecto(id)
     mostrarTareas(id)
 
@@ -26,7 +27,7 @@ const Card = ({proyecto}) => {
   return (
    
       <div className={styles.card} onClick={() => HandleClick(proyecto._id)}>
-         <NavLink to={'/projects'} className={styles.nav}>
+         <NavLink to={'/projects/'} className={styles.nav}>
          <div className={styles.info}>
         <h2>{proyecto.name}</h2>
         </div>

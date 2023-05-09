@@ -2,6 +2,8 @@ import React, { useContext, useEffect } from 'react'
 import styles from '../../CSS/user.module.css'
 import authContext from '../../context/autenticacion/AuthContext'
 import proyectoContext from '../../context/proyectos/ProyectoContext'
+import TareaContext from '../../context/tareas/tareaContext'
+
 
 
 
@@ -11,11 +13,16 @@ const InfoUser = () => {
     const infoContext = useContext(authContext)
     const project = useContext(proyectoContext)
 
+    const tareas = useContext(TareaContext)
+    const {tareasProyecto} = tareas
+    
+
     const { usuario, usuarioAutenticado } = infoContext;
     const {proyectos} = project;
 
     useEffect(() => {
       usuarioAutenticado()
+  
     }, [])
     
   
@@ -39,8 +46,7 @@ const InfoUser = () => {
       </div>
       <div className={styles.info}>
           <h4>email:<p>{usuario.email}</p></h4>
-          <h4>Cant-Pojects:<p>{proyectos.length}</p></h4>
-          <h4>Cant-Tasks:<p>6</p></h4>
+          <h4>Cant-Projects:<p>{proyectos.length}</p></h4>
       </div>
         </>
        

@@ -9,7 +9,8 @@ const NewTask = () => {
   const proyectosContext = useContext(proyectoContext);
   const { proyecto } = proyectosContext;
 
-  const [proyectoActual] = proyecto;
+
+
 
   useEffect(() => {
     if (tareaSeleccionada !== null) {
@@ -27,6 +28,11 @@ const NewTask = () => {
 
 
   const { name } = task;
+  if(!proyecto) return null;
+
+
+  const [proyectoActual] = proyecto;
+
 
   const HandleChange = (e) => {
     setTask({
@@ -47,10 +53,11 @@ const NewTask = () => {
     //Si es una tarea nueva o tarea para editar
     if (tareaSeleccionada !== null) {
       actualizarTarea(task);
-      // agregar la nueva tarea al state de tareas
+
     
    
     }else{
+      // agregar la nueva tarea al state de tareas
       task.project = proyectoActual._id;
       agregarTarea(task);
 

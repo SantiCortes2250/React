@@ -3,7 +3,8 @@ import Task from "./Task";
 import styles from "../../CSS/listTasks.module.css";
 import proyectoContext from "../../context/proyectos/ProyectoContext";
 import TareaContext from "../../context/tareas/tareaContext";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { Navigate } from "react-router-dom";
+
 
 const ListTask = () => {
   const proyectosContext = useContext(proyectoContext);
@@ -11,29 +12,22 @@ const ListTask = () => {
   const { proyecto } = proyectosContext;
   const { tareasProyecto } = tareasContext;
 
+  if(!proyecto) return <Navigate to={'/Dashboard'}/>;
   const [proyectoActual] = proyecto;
+
+ 
 
   return (
     <div className={styles.container}>
        <h2>{proyectoActual.name}</h2> 
       <div className={styles.tasks}>
         {tareasProyecto.length === 0 ? (
-          <h4>No hay Tareas</h4>
+          <h4>No tasks</h4>
         ) : (
-          <TransitionGroup>
-            {tareasProyecto.map((task, index) => (
-              <CSSTransition
-               key={index}
-               timeout={1000}
-               classNames="tarea"
-
-
-              >
-                <Task task={task} />
-              </CSSTransition>
-            ))}
-          </TransitionGroup>
-        )}
+            tareasProyecto.map(task => (
+                <Task task={task} key={task._id}/>
+            )
+        ))}
       </div>
     </div>
   );

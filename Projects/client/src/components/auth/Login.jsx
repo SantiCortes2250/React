@@ -4,7 +4,6 @@ import styles from '../../CSS/login.module.css'
 import authContext from '../../context/autenticacion/AuthContext'
 import alertaContext from '../../context/alertas/alertaContext'
 import { useNavigate } from "react-router-dom";
-import PrivateRute from '../rutes/PrivateRute'
 
 
 
@@ -91,10 +90,7 @@ const Login = () => {
       
       </div>
       <div className={styles.form}>
-        <div className={styles.title}>
-        { alerta ? (<div className={`${alerta.categoria}`}>{alerta.msg}</div>) : null}
         
-        </div>
         <form
         onSubmit={HandleSubmit}
         >
@@ -126,6 +122,10 @@ const Login = () => {
             <label className={styles.label}  htmlFor='password'><img src='https://res.cloudinary.com/dhbi86hxn/image/upload/v1683171306/Projects/icons/bloquear_1_n6cg6y.png'></img></label>
        
           </div>
+       
+        { alerta ? (<div className={styles.alerta}>{alerta.msg}</div>) : null}
+        
+      
           <button className={styles.btn}>Log in</button>
         </form>
       </div>

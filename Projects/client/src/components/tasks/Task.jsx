@@ -16,8 +16,9 @@ const Task = ({task}) => {
  
 
     const HandleClick = id =>{
+     
  
-        eliminarTarea(id)
+        eliminarTarea(id, proyectoActual._id)
         mostrarTareas(proyectoActual.id)
        
   
@@ -38,7 +39,7 @@ const Task = ({task}) => {
   return (
     <div className={styles.task}>
       <label className={styles.checkBox}>
-        <input type="checkbox" onClick={() => HandleClick(task.id)}/>
+        <input type="checkbox" onClick={() => HandleClick(task._id)}/>
         <div className={styles.transition}></div>
       </label>
       <p>{task.name}</p>

@@ -83,6 +83,7 @@ const ProyectoState = props =>{
 
 
     const obtenerProyecto = idProyecto =>{
+     
         dispatch({
             type: OBTENER_PROYECTO,
             payload: idProyecto

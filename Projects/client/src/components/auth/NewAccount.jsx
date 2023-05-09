@@ -115,9 +115,8 @@ const NewAccount = (props) => {
       
       </div>
       <div className={styles.form}>
-        { alerta ? (<div className={`${alerta.categoria}`}>{alerta.msg}</div>) : null}
-        <div className={styles.title}>
-        </div>
+   
+        
         <form
         onSubmit={HandleSubmit}
         >
@@ -173,6 +172,7 @@ const NewAccount = (props) => {
            <label className={styles.label}  htmlFor='password'><img src='https://res.cloudinary.com/dhbi86hxn/image/upload/v1683171306/Projects/icons/bloquear_1_n6cg6y.png'></img></label>
       
           </div>
+          { alerta ? (<div className={styles.alerta}>{alerta.msg}</div>) : null}
           <button className={styles.btn}>Register Now</button>
         </form>
       </div>
