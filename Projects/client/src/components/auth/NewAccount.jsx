@@ -108,7 +108,7 @@ const NewAccount = (props) => {
     <div className={styles.login}>
        <div className={styles.containerLogo2}>
        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-  <path fill="#ff0000" fill-opacity="1" d="M0,256L34.3,229.3C68.6,203,137,149,206,117.3C274.3,85,343,75,411,106.7C480,139,549,213,617,213.3C685.7,213,754,139,823,133.3C891.4,128,960,192,1029,218.7C1097.1,245,1166,235,1234,197.3C1302.9,160,1371,96,1406,64L1440,32L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
+  <path fill="#ff0000" fillOpacity="1" d="M0,256L34.3,229.3C68.6,203,137,149,206,117.3C274.3,85,343,75,411,106.7C480,139,549,213,617,213.3C685.7,213,754,139,823,133.3C891.4,128,960,192,1029,218.7C1097.1,245,1166,235,1234,197.3C1302.9,160,1371,96,1406,64L1440,32L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
 </svg>
       <img className={styles.imgIcon} src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1678939561/Projects/icons/DashPro-movile_cjdo1y.png" alt="" />
       <div className={styles.imgLogo2}><img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1683174110/Projects/icons/correo-electronico_dpklfe.png" alt="" /></div>

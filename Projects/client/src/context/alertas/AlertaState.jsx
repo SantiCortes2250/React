@@ -17,12 +17,12 @@ const alertaState = (props) => {
   
     //Funciones
 
-    const mostrarAlerta = (msg, categoria) =>{
+    const mostrarAlerta = (msg) =>{
         dispatch({
             type: MOSTRAR_ALERTA,
             payload:{
                 msg,
-                categoria
+            
             }
         })
 
