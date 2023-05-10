@@ -20,7 +20,7 @@ const AboutMe = () => {
           <img src={info.image} alt="" />
         </div>
           <div className={styles.info}>
-              <h2>I'm Santi Rincon, a Full Stack Developer and Freelancer</h2>
+              <h2>I'm Santi Rincon, a Frontend Developer and Freelancer</h2>
               <p>{info.Description}</p>
               <hr/>
               <div className={styles.dates}>

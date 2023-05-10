@@ -3,7 +3,7 @@
     "From" : "Colombia",
     "Phone" : "+57 300-605-2291",
     "Email" : "santicortesrincon15@gmail.com",
-    "Description" : "I'm a Full Stack Developer with extensive experience in web development. I am passionate about technology and am always looking for new ways to improve my skills and knowledge. My focus is on creating scalable and efficient web and mobile applications to improve the user experience.",
+    "Description" : "I'm a Frontend Developer with extensive experience in web development. I am passionate about technology and am always looking for new ways to improve my skills and knowledge. My focus is on creating scalable and efficient web and mobile applications to improve the user experience.",
     "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677450084/perfil_qczy0y.png",
     "Experience" : [
         {
@@ -106,6 +106,19 @@
             "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682296118/Projects/icons/cock_k3rjvf.png"
         },
         {
+            "project" : "DashPro",
+            "Link" : "https://dashpro.netlify.app/",
+            "github" : "https://github.com/SantiCortes2250/React/tree/main/Projects",
+            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682297243/Projects/dash_1_khcbd0.png",
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682297004/Projects/icons/proje_tp7jbp.png"
+        },
+        {
+            "project" : "Booker",
+            "Link" : "https://bookerweb.netlify.app",
+            "github" : "https://github.com/SebasCepedaTobon/Booker/tree/Changes",
+            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682295896/Projects/booker_1_tur1px.jpg",
+            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677637598/Projects/icons/iconBook_brp2ns.png"
+        }, {
             "project" : "PixelFree",
             "Link" : "https://pixelfree.netlify.app/",
             "github" : "https://github.com/SantiCortes2250/React/tree/main/pixabay",
@@ -118,20 +131,6 @@
             "github" : "https://github.com/SantiCortes2250/React/tree/main/cripto",
             "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682296650/Projects/cripto_1_s1jm21.png",
             "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682296747/Projects/icons/bitcoin_zg1hbp.png"
-        },
-        {
-            "project" : "DashPro",
-            "Link" : "",
-            "github" : "https://github.com/SantiCortes2250/React/tree/main/Projects",
-            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682297243/Projects/dash_1_khcbd0.png",
-            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682297004/Projects/icons/proje_tp7jbp.png"
-        },
-        {
-            "project" : "Booker",
-            "Link" : "https://bookerweb.netlify.app",
-            "github" : "https://github.com/SebasCepedaTobon/Booker/tree/Changes",
-            "image" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1682295896/Projects/booker_1_tur1px.jpg",
-            "icon" : "https://res.cloudinary.com/dhbi86hxn/image/upload/v1677637598/Projects/icons/iconBook_brp2ns.png"
         }
     ]
 
