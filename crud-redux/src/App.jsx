@@ -1,11 +1,12 @@
-
+import React from "react"
+import Header from "./components/Header"
 
 function App() {
- 
+
 
   return (
     <>
-    <h2>CRUD</h2>
+    <Header/>
     </>
   )
 }
