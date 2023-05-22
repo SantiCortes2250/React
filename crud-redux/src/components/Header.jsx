@@ -1,16 +1,22 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
     <nav className='navbar navbar-expand-lg navbar-dark bg-primary
     justify-content-between'>
       <div className='container'>
-        <h1>CRUD - React, Redux, REST API & Axios</h1>
+        <h1>
+          <NavLink to={'/'} className="text-light">
+            CRUD - React, Redux, REST API & Axios
+          </NavLink>
+          </h1>
       </div>
-      <a 
+      <NavLink
+        to={'/productos/nuevo'}
         className='btn btn-danger nuevo-post d-block d-md-inline-block'
-        href="/productos/nuevo">Agregar Nuevo &#43;</a>
-
+      >Agregar Nuevo &#43;
+      </NavLink>
     </nav>
   )
 }
