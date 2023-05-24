@@ -2,7 +2,7 @@ import React from "react";
 import Nav from "./Nav";
 import styles from "../CSS/header.module.css";
 import Typewriter from "typewriter-effect";
-import info from "../../info.json";
+import info from '../../public/locales/en/info.json'
 import { Link } from "react-scroll";
 
 export const Header = () => {

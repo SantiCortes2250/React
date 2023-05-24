@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import './slick.css'
 import  settings  from './settings';
 import style from '../../CSS/skills.module.css'
-import info from '../../../info.json'
+import info from '../../../public/locales/en/info.json'
 
 const Skills = () => {
 

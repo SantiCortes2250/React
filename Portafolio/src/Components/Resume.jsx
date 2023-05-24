@@ -1,10 +1,15 @@
 import React from 'react'
-import info from '../../info.json'
+import info from '../../public/locales/en/info.json'
 import style from '../CSS/resume.module.css'
+import { useTranslation } from "react-i18next";
 
 
 const Resume = ({isOpen, setIsOpen, setId}) => {
 
+  const { t } = useTranslation(["info"]);
+ 
+
+ 
 
   return (
     <div className={style.container} id='resume'>
@@ -37,7 +42,7 @@ const Resume = ({isOpen, setIsOpen, setId}) => {
               <div key={index}>
                 <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1677974346/Projects/icons/flecha_jw9v6e.png" alt="" className={style.img}/>
                 <div className={style.info}>
-                  <h4>{edu.certificate}</h4>
+                  <h4>{t(edu.certificate)}</h4>
                   <p>{edu.year}</p>
                   <p>{edu.university}</p>
                 </div>

@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "i18next": "^22.5.0",
+    "i18next-http-backend": "^2.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.3.1",
     "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",

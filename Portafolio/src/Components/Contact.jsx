@@ -1,5 +1,5 @@
 import React, {useRef , useState} from 'react'
-import info from '../../info.json'
+import info from '../../public/locales/en/info.json'
 import style from '../CSS/contact.module.css'
 import emailjs from '@emailjs/browser'
 import Message from './Message'

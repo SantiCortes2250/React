@@ -1,41 +1,49 @@
-import React from 'react'
+import React from "react";
 import styles from "../CSS/about.module.css";
-
-import info from '../../info.json'
-
+import { useTranslation } from "react-i18next";
+import { Suspense } from "react";
 
 const AboutMe = () => {
+  const { t, i18n } = useTranslation(["info"]);
 
-
-  
   return (
-    <div className={styles.container} id='about' >
-      <h2 className={styles.section}>
-        About me
-        <span className={styles.title}> About </span>
-
-      </h2>
-      <div className={styles.about}>
-        <div className={styles.img}>
-          <img src={info.image} alt="" />
-        </div>
-          <div className={styles.info}>
-              <h2>I'm Santi Rincon, a Frontend Developer and Freelancer</h2>
-              <p>{info.Description}</p>
-              <hr/>
-              <div className={styles.dates}>
-                  <p>Name:<span>{info.name}</span></p>
-                  <p>From:<span>{info.From}</span></p>
-                  <p>Phone:<span>{info.Phone}</span></p>
-                  <p>Email:<span>{info.Email}</span></p>
-              </div>
-                <a href='./cv-santiagoRincon.pdf' download> <button>Download CV</button></a>
-           
+    <Suspense fallback="Cargando Traducciones">
+      <div className={styles.container} id="about">
+        <h2 className={styles.section}>
+          {i18n.language === 'en' ? 'About me' : 'Sobre mi'}
+          <span className={styles.title}> About </span>
+        </h2>
+        <div className={styles.about}>
+          <div className={styles.img}>
+            <img src={t("image")} alt="" />
           </div>
+          <div className={styles.info}>
+            <h2>I'm Santi Rincon, a Frontend Developer and Freelancer</h2>
+            <p>{t("Description")}</p>
+            <hr />
+            <div className={styles.dates}>
+              <p>
+                Name:<span>{t("name")}</span>
+              </p>
+              <p>
+                From:<span>{t("From")}</span>
+              </p>
+              <p>
+                Phone:<span>{t("Phone")}</span>
+              </p>
+              <p>
+                Email:<span>{t("Email")}</span>
+              </p>
+            </div>
+            <a href="./cv-santiagoRincon.pdf" download>
+              {" "}
+              <button>Download CV</button>
+            </a>
+          </div>
+        </div>
       </div>
-    
-    </div>
-  )
-}
+    </Suspense>
+  );
+};
 
-export default AboutMe
+export default AboutMe;

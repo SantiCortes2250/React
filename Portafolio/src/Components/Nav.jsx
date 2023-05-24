@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import logo from "../../src/Assets/img/logo.png";
 import styles from "../CSS/nav.module.css";
 import { Link } from "react-scroll";
+import Check from "./Check";
+
 
 const Nav = () => {
   const [nav, setNav] = useState(false);
   const [navbarColor, setNavbarColor] = useState("transparent");
-  
 
 
   const Nav = nav ? (
@@ -55,6 +56,7 @@ const Nav = () => {
         </div>
         <div className={styles.links}>
           <nav className={styles.linksN}>
+            <Check/>
             <Link to="about" spy={true} offset={-50} duration={500} smooth={true}>About Me</Link>
             <Link to="resume" spy={true} offset={-20} duration={500} smooth={true}>Resume</Link>
             <Link to="projects" spy={true} offset={-120} duration={500} smooth={true}>Projects</Link>

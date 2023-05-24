@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "../CSS/modal.module.css";
-import info from '../../info.json'
+import info from '../../public/locales/en/info.json'
 
 function Modal({ isOpen, setIsOpen, id }) {
 
