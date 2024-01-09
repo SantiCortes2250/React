@@ -15,7 +15,7 @@ const AboutMe = () => {
         </h2>
         <div className={styles.about}>
           <div className={styles.img}>
-            <img src={t("image")} alt="" />
+            <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1677450084/perfil_qczy0y.png" alt="" />
           </div>
           <div className={styles.info}>
             <h2>{t("title")}</h2>

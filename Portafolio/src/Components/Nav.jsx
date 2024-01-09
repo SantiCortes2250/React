@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../src/Assets/img/logo.png";
 import styles from "../CSS/nav.module.css";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
 import Check from "./Check";
 
 
 const Nav = () => {
+  const { t, i18n } = useTranslation(["info"]);
   const [nav, setNav] = useState(false);
   const [navbarColor, setNavbarColor] = useState("transparent");
 
@@ -54,22 +56,28 @@ const Nav = () => {
           <img src={logo} alt="" className={styles.img} />
         </Link>
         </div>
-        <div className={styles.links}>
+        <div className={styles.check}>
+          <Check/>
+
+          <div className={styles.links}>
           <nav className={styles.linksN}>
-            <Check/>
-            <Link to="about" spy={true} offset={-50} duration={500} smooth={true}>About Me</Link>
-            <Link to="resume" spy={true} offset={-20} duration={500} smooth={true}>Resume</Link>
-            <Link to="projects" spy={true} offset={-120} duration={500} smooth={true}>Projects</Link>
-            <Link to="contact" spy={true} offset={-70} duration={500} smooth={true}>Contact</Link>
+           
+            <Link to="about" spy={true} offset={-50} duration={500} smooth={true}>{t("about")}</Link>
+            <Link to="resume" spy={true} offset={-20} duration={500} smooth={true}>{t("resume")}</Link>
+            <Link to="projects" spy={true} offset={-120} duration={500} smooth={true}>{t("projects")}</Link>
+            <Link to="contact" spy={true} offset={-70} duration={500} smooth={true}>{t("contact")}</Link>
           </nav>
           {Nav}
         </div>
+        </div>
+      
       </div>
       <nav className={nav ? styles.navOpen : styles.navClose}>
-            <Link to="about" spy={true} offset={50} duration={500} smooth={true}>About Me</Link>
-            <Link to="resume" spy={true} offset={50} duration={500} smooth={true}>Resume</Link>
-            <Link to="projects" spy={true} offset={-50} duration={500} smooth={true}>Projects</Link>
-            <Link to="contact" spy={true} offset={-50} duration={500} smooth={true}>Contact</Link>
+     
+            <Link to="about" spy={true} offset={50} duration={500} smooth={true}>{t("about")}</Link>
+            <Link to="resume" spy={true} offset={50} duration={500} smooth={true}>{t("resume")}</Link>
+            <Link to="projects" spy={true} offset={-50} duration={500} smooth={true}>{t("projects")}</Link>
+            <Link to="contact" spy={true} offset={-50} duration={500} smooth={true}>{t("contact")}</Link>
       </nav>
     </>
   );
