@@ -18,7 +18,7 @@ const AboutMe = () => {
             <img src={t("image")} alt="" />
           </div>
           <div className={styles.info}>
-            <h2>I'm Santi Rincon, a Frontend Developer and Freelancer</h2>
+            <h2>{t("title")}</h2>
             <p>{t("Description")}</p>
             <hr />
             <div className={styles.dates}>
