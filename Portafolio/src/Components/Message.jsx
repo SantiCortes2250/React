@@ -1,10 +1,13 @@
 import React from 'react'
 import styles from '../CSS/message.module.css'
+import { useTranslation } from "react-i18next";
 
 const Message = ({message}) => {
+  const { t } = useTranslation(["info"]);
+
   return (
     <div className={message ? styles.container : styles.containerOff}>
-        <p>Thanks for you message!!</p>
+        <p>{t("thanks")}</p>
     </div>
   )
 }

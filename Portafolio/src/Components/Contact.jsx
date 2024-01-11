@@ -1,13 +1,12 @@
 import React, {useRef , useState} from 'react'
-import info from '../../public/locales/en/info.json'
 import style from '../CSS/contact.module.css'
 import emailjs from '@emailjs/browser'
 import Message from './Message'
-
+import { useTranslation } from "react-i18next";
 
 
 const Contact = () => {
-
+  const { t } = useTranslation(["info"]);
 
   const refForm = useRef();
 
@@ -63,32 +62,32 @@ const Contact = () => {
 
     <div className={style.container} id='contact'>
       <h2 className={style.section}>
-        Get in Touch
+        {t("get")}
         <span className={style.title}> Contact </span>
 
       </h2>
       <div className={style.forms}>
       <div className={style.form}>
-        <h2>Message Me</h2>
+        <h2>{t("message")}</h2>
         <form
           ref={refForm}
           onSubmit={HandleSubmit}
 
         >
           <div className={style.email}>
-          <input type="text" placeholder='Name' name="name" required id='name' autoComplete="off"/>
-          <input type="email" placeholder='Email' name="email" required id='email' autoComplete="off"/>
+          <input type="text" placeholder={t("name")} name="name" required id='name' autoComplete="off"/>
+          <input type="email" placeholder={t("email")} name="email" required id='email' autoComplete="off"/>
 
           </div>
        
-        <input type="text" placeholder='Subject' name="subject" id='subject' required autoComplete="off"/>
-        <textarea name="message" id="message" cols="30" rows="10" placeholder='Message' required autoComplete="off"/>
-        <button>Send Message</button>
+        <input type="text" placeholder={t("subject")} name="subject" id='subject' required autoComplete="off"/>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder={t("messageText")} required autoComplete="off"/>
+        <button>{t("send")}</button>
         </form>
       </div>
       <div className={style.containerInfo}>
-        <h2>Contact Info</h2>
-        <p>¡feel free to contact me!</p>
+        <h2>{t("info")}</h2>
+        <p>{t("feel")}</p>
         <div className={style.contact}>
         <div className={style.icons}>
           <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1677643541/Projects/icons/user_xiuj6a.png" alt="" />
@@ -97,14 +96,14 @@ const Contact = () => {
           <img src="https://res.cloudinary.com/dhbi86hxn/image/upload/v1677643541/Projects/icons/mail_namp01.png" alt="" />
         </div>
         <div className={style.info}>
-          <h4>Name</h4>
-          <p>{info.name}</p>
-          <h4>Location</h4>
-          <p>{info.From}</p>
-          <h4>Call Me</h4>
-          <p>{info.Phone}</p>
-          <h4>Email Me</h4>
-          <p>{info.Email}</p>
+          <h4>{t("name")}</h4>
+          <p>Santiago Rincon Cortes</p>
+          <h4>{t("location")}</h4>
+          <p>Colombia</p>
+          <h4>{t("callMe")}</h4>
+          <p>+57 300-605-2291</p>
+          <h4>{t("emailMe")}</h4>
+          <p>santicortesrincon15@gmail.com</p>
         </div>
           
         </div>

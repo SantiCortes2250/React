@@ -9,10 +9,10 @@ const Check = () => {
     
     const { i18n } = useTranslation();
   
-    const [checked, setChecked] = useState(i18n.language === 'en');
+    const [checked, setChecked] = useState(i18n.language === 'es');
 
     const handleChange = () => {
-      const newLanguage = checked ? 'es' : 'en';
+      const newLanguage = checked ? 'en' : 'es';
       setChecked(!checked);
       i18n.changeLanguage(newLanguage);
     };

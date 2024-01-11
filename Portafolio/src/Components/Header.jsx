@@ -3,26 +3,30 @@ import Nav from "./Nav";
 import styles from "../CSS/header.module.css";
 import Typewriter from "typewriter-effect";
 import info from '../../public/locales/en/info.json'
+import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
 
 export const Header = () => {
+  const { t, i18n } = useTranslation(["info"]);
+
+
   return (
     <>
       <Nav />
       <div className={styles.container} id="home">
         <div className={styles.info}>
-          <p>Hi There!</p>
+          <p>{t("hi")}</p>
           <div className={styles.writer}>
-            I am
+          {t("iam")}
             <Typewriter
               options={{
-                strings: ["Santi Rincon", "Developer", "Freelancer"],
+                strings: ["Santi Rincon", "Developer"],
                 autoStart: true,
                 loop: true,
               }}
             />
           </div>
-          <p>Improving every day.</p>
+          <p>{t("improving")}</p>
           <Link
             to="contact"
             spy={true}
@@ -30,21 +34,21 @@ export const Header = () => {
             duration={500}
             smooth={true}
           >
-            <button>Contact Me</button>
+            <button>{t("contactMe")}</button>
           </Link>
         </div>
         <div className={styles.contact}>
           <div className={styles.dates}>
-            <h4>Email</h4>
-            <p>{info.Email}</p>
+            <h4>{t("email")}</h4>
+            <p>santicortesrincon15@gmail.com</p>
           </div>
           <div className={styles.dates2}>
-            <h4>Phone</h4>
-            <p>{info.Phone}</p>
+            <h4>{t("phone")}</h4>
+            <p>+57 300-605-2291</p>
           </div>
           <div className={styles.dates}>
-            <h4>Location</h4>
-            <p>{info.From}</p>
+            <h4>{t("location")}</h4>
+            <p>Colombia</p>
           </div>
           <div className={styles.dates3}>
             <a href="https://github.com/SantiCortes2250" target="_blank">

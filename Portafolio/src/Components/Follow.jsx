@@ -1,10 +1,12 @@
 import React from 'react'
 import style from '../CSS/follow.module.css'
+import { useTranslation } from "react-i18next";
 
 const Follow = () => {
+  const { t } = useTranslation(["info"]);
   return (
     <div className={style.container}>
-        <p>Follow Me</p>
+        <p>{t("get")}</p>
         <hr />
         <div className={style.icons}>
           <a href="https://github.com/SantiCortes2250" target='_blank'>

@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "../CSS/projects.module.css";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t } = useTranslation(["info"]);
   const projects = [
     {
       project: "Movie-Time",
@@ -55,7 +57,7 @@ const Projects = () => {
   return (
     <div className={styles.container} id="projects">
       <h2 className={styles.section}>
-        My Projects
+        {t("myProjects")}
         <span className={styles.title}> Project </span>
       </h2>
       <div className={styles.cards}>
@@ -65,7 +67,7 @@ const Projects = () => {
               <img src={project.icon} alt="" />
               <p>{project.project}</p>
               <a href={project.Link} target="_blank">
-                Link
+              {t("link")}
               </a>
               <a href={project.github} target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -85,7 +87,7 @@ const Projects = () => {
       </div>
       <div className={styles.btn}>
         <a href="https://github.com/SantiCortes2250/React" target="_blank">
-          All projects
+        {t("all")}
         </a>
       </div>
     </div>

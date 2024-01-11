@@ -7,7 +7,7 @@ const AboutMe = () => {
   const { t, i18n } = useTranslation(["info"]);
 
   return (
-    <Suspense fallback="Cargando Traducciones">
+   
       <div className={styles.container} id="about">
         <h2 className={styles.section}>
           {i18n.language === 'en' ? 'About me' : 'Sobre mi'}
@@ -23,26 +23,26 @@ const AboutMe = () => {
             <hr />
             <div className={styles.dates}>
               <p>
-                Name:<span>{t("name")}</span>
+              {t("name")}:<span>Santiago Rincon Cortes</span>
               </p>
               <p>
-                From:<span>{t("From")}</span>
+              {t("location")}:<span>Colombia</span>
               </p>
               <p>
-                Phone:<span>{t("Phone")}</span>
+              {t("phone")}:<span>+57 300-605-2291</span>
               </p>
               <p>
-                Email:<span>{t("Email")}</span>
+              {t("email")}:<span>santicortesrincon15@gmail.com</span>
               </p>
             </div>
             <a href="./cv-santiagoRincon.pdf" download>
               {" "}
-              <button>Download CV</button>
+              <button>{t("btnDownload")}</button>
             </a>
           </div>
         </div>
       </div>
-    </Suspense>
+
   );
 };
 

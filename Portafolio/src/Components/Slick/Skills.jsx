@@ -5,8 +5,10 @@ import Slider from "react-slick";
 import "./slick.css";
 import settings from "./settings";
 import style from "../../CSS/skills.module.css";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
+  const { t } = useTranslation(["info"]);
   const skills = [
     {
       skill: "HTML",
@@ -37,7 +39,7 @@ const Skills = () => {
   return (
     <div className={style.container}>
       <h2 className={style.section}>
-        My Skills
+        {t("tecno")}
         <span className={style.title}> Skills </span>
       </h2>
       <div className={style.icons}>
